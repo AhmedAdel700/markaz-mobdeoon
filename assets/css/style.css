@@ -82,6 +82,7 @@ header {
   background-color: var(--main-white);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  overflow: visible; /* Allow dropdown to extend beyond header */
 }
 
 /* ✅ Header content layout */
@@ -91,6 +92,7 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+  overflow: visible; /* Allow dropdown to extend beyond container */
 }
 
 /* ✅ Navigation styles */
@@ -102,6 +104,7 @@ header nav ul {
   font-size: 16px;
   gap: 10px;
   height: 100%;
+  overflow: visible; /* Allow dropdown to extend beyond nav */
 }
 
 header nav ul li {
@@ -145,48 +148,73 @@ header nav ul li > a.active::after {
 /* -------------------------------------------------- */
 /* 🟢 DROPDOWN MENU */
 /* -------------------------------------------------- */
-header nav ul li.dropdown {
+
+header nav .dropdown {
   position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
-/* Hidden by default */
-header nav ul li .dropdown-menu {
-  position: absolute;
-  top: 100%;
-  right: 0; /* adjust to left:0 if using LTR */
-  background-color: var(--main-white);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 6px;
+/* Dropdown button styled like nav links */
+header nav .dropdown-toggle {
+  background-color: transparent !important;
+  color: var(--main-gray) !important;
+  font-weight: 500;
+  font-size: 16px;
+  border: none !important;
+  padding: 10px 16px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: color var(--main-transition) ease;
+}
+
+header nav .dropdown-toggle:hover,
+header nav .dropdown-toggle:focus {
+  color: var(--primary-color) !important;
+  box-shadow: none;
+}
+
+/* Dropdown menu styling */
+header nav .dropdown-menu {
+  border: none;
+  border-radius: 0 0 8px 8px; /* connected to button */
+  padding: 8px 0;
+  margin-top: 0; /* remove gap */
   min-width: 180px;
-  height: fit-content;
-  padding: 10px 0;
-  display: none;
-  z-index: 999;
+  max-height: none !important;
+  height: auto !important;
+  overflow: visible !important;
+  background-color: var(--main-white);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  text-align: right; /* RTL */
 }
 
 /* Dropdown items */
-header nav ul li .dropdown-menu li a {
-  display: block;
-  padding: 10px 16px;
-  color: #333;
+header nav .dropdown-item {
+  color: var(--main-gray);
+  padding: 10px 20px;
   font-weight: 500;
-  white-space: nowrap;
   transition: background-color var(--main-transition) ease,
     color var(--main-transition) ease;
 }
 
-header nav ul li .dropdown-menu li a:hover {
-  background-color: var(--primary-color);
-  color: var(--main-white);
+header nav .dropdown-item:hover,
+header nav .dropdown-item:focus {
+  background-color: rgba(4, 85, 49, 0.08);
+  color: var(--primary-color);
 }
 
-/* Show on hover */
-header nav ul li.dropdown:hover .dropdown-menu {
-  display: block;
+/* Dropdown arrow */
+header nav .dropdown-toggle::after {
+  margin-inline-start: 6px;
+  vertical-align: middle;
+  border-top-color: var(--main-gray) !important;
 }
 
-.bottom-arrow {
-  margin: 0 6px;
+header nav .dropdown-toggle:hover::after {
+  border-top-color: var(--primary-color) !important;
 }
 
 /* -------------------------------------------------- */

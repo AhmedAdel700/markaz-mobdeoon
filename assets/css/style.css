@@ -1,0 +1,321 @@
+/* -------------------------------------------------- */
+/* 🟢 IMPORTS & ROOT VARIABLES */
+/* -------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap");
+
+:root {
+  --primary-color: #045531;
+  --main-white: #ffffff;
+  --main-gray: #666666;
+  --hover-btn-bg: #033d23;
+
+  --main-transition: 0.35s;
+}
+
+/* -------------------------------------------------- */
+/* 🟢 GLOBAL RESETS & BASE STYLES */
+/* -------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Tajawal", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin: 0 !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* -------------------------------------------------- */
+/* 🟢 LAYOUT & UTILITY CLASSES */
+/* -------------------------------------------------- */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.main-btn {
+  height: 48px;
+  min-width: 130px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  color: var(--main-white);
+  font-weight: 600;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+.main-btn:hover {
+  background-color: var(--hover-btn-bg);
+}
+
+/* -------------------------------------------------- */
+/* 🟢 HEADER STYLES */
+/* -------------------------------------------------- */
+
+/* ✅ Full-width sticky header */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--main-white);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* ✅ Header content layout */
+.header-container {
+  height: 82px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ✅ Navigation styles */
+header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  gap: 10px;
+  height: 100%;
+}
+
+header nav ul li {
+  padding: 10px 16px;
+}
+
+header nav ul li a {
+  padding: 10px 0;
+  transition: color var(--main-transition) ease;
+  position: relative;
+}
+
+/* ✅ Hover & active link states */
+header nav ul li > a:hover,
+header nav ul li > a.active {
+  color: var(--primary-color);
+}
+
+header nav ul li > a.active {
+  font-weight: bold;
+}
+
+/* ✅ Underline effect (hover + active) */
+header nav ul li > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width var(--main-transition) ease;
+}
+
+header nav ul li > a:hover::after,
+header nav ul li > a.active::after {
+  width: 70px;
+}
+
+/* -------------------------------------------------- */
+/* 🟢 DROPDOWN MENU */
+/* -------------------------------------------------- */
+header nav ul li.dropdown {
+  position: relative;
+}
+
+/* Hidden by default */
+header nav ul li .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0; /* adjust to left:0 if using LTR */
+  background-color: var(--main-white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  min-width: 180px;
+  height: fit-content;
+  padding: 10px 0;
+  display: none;
+  z-index: 999;
+}
+
+/* Dropdown items */
+header nav ul li .dropdown-menu li a {
+  display: block;
+  padding: 10px 16px;
+  color: #333;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background-color var(--main-transition) ease,
+    color var(--main-transition) ease;
+}
+
+header nav ul li .dropdown-menu li a:hover {
+  background-color: var(--primary-color);
+  color: var(--main-white);
+}
+
+/* Show on hover */
+header nav ul li.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.bottom-arrow {
+  margin: 0 6px;
+}
+
+/* -------------------------------------------------- */
+/* 🟢 HEADER BUTTONS */
+/* -------------------------------------------------- */
+header .header-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+button i.likes,
+button i.bag {
+  color: #b3b3b3;
+  font-size: 24px;
+  transition: color var(--main-transition) ease;
+}
+
+/* Hover effect for icons */
+button:hover i.likes,
+button:hover i.bag {
+  color: var(--primary-color);
+}
+
+button.lang-btn {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+button.lang-btn:hover {
+  color: var(--primary-color);
+}
+
+/* -------------------------------------------------- */
+/* 🟢 HERO SECTION */
+/* -------------------------------------------------- */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ✅ Background image fills hero */
+.frame1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 82px);
+  z-index: -1;
+  object-fit: cover;
+}
+
+html[dir="ltr"] .frame1 {
+  transform: scaleX(-1);
+}
+
+.hero-img {
+  position: absolute;
+  bottom: 8.6%;
+  inset-inline-end: 0;
+}
+
+html[dir="ltr"] .hero-img {
+  transform: scaleX(-1);
+}
+
+.hero .hero-text-box {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 40px;
+  height: 100%;
+  margin-inline-start: 200px;
+}
+
+.hero .hero-text {
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.hero .hero-text-box p {
+  color: var(--main-gray);
+  font-size: 24px;
+  width: 70%;
+  line-height: 1.6;
+}
+
+.hero .hero-text-box button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 155px;
+}
+
+/* -------------------------------------------------- */
+/* 🟢 RESPONSIVE CONTAINER SIZES */
+/* -------------------------------------------------- */
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}

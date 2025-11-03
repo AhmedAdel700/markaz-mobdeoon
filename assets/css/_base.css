@@ -28,3 +28,69 @@ html {
   scroll-behavior: smooth;
 }
 
+/* -------------------------------------------------- */
+/* 🟢 Custom Scrollbar */
+/* -------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 6px; /* thin scrollbar */
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* or var(--main-white) if you want a visible track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  transition: background-color var(--main-transition);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--hover-btn-bg);
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) transparent;
+}
+
+/* -------------------------------------------------- */
+/* 🟢 Form Controls - Global inputs/selects consistent with Hero */
+/* -------------------------------------------------- */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+select,
+.form-control,
+.form-select {
+  height: 48px;
+  border: 1px solid #ebedef;
+  border-radius: 6px;
+  color: var(--main-gray);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.8;
+  background-color: var(--main-white);
+  transition: box-shadow var(--main-transition), border-color var(--main-transition);
+  padding-inline-start: 12px;
+  padding-inline-end: 12px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+select:focus,
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(4, 85, 49, 0.15);
+  outline: none;
+}

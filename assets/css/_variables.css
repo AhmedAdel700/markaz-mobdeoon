@@ -6,8 +6,11 @@
 
 :root {
   --primary-color: #045531;
+  --secondary-color: #EDF4F2;
+  --primary-color-40: #1e764f;
   --main-white: #ffffff;
   --main-black: #1a1a1a;
+  --secondary-black: #4D4D4D;
   --main-gray: #666666;
   --hover-btn-bg: #033d23;
 

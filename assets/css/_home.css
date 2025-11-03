@@ -104,15 +104,7 @@ html[dir="ltr"] .hero-img {
   text-align: start;
 }
 
-.search-box div select,
-.search-box div input {
-  border: 1px solid #ebedef;
-  border-radius: 6px;
-  color: var(--main-gray);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.8;
-}
+/* Inputs/selects now inherit global styles from base */
 
 /* Better native select styling (arrow, focus, hover) */
 .search-box .form-select {
@@ -141,12 +133,7 @@ html[dir="ltr"] .search-box .form-select {
 }
 
 /* Make inputs use the same focus outline as the select */
-.search-box .form-control:focus,
-.search-box div input:focus {
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 0.25rem rgba(4, 85, 49, 0.15);
-  outline: none;
-}
+/* Focus styles inherited globally from base */
 
 .search-box button {
   white-space: nowrap;
@@ -154,7 +141,265 @@ html[dir="ltr"] .search-box .form-select {
 }
 
 /* -------------------------------------------------- */
-/* 🟣 RESPONSIVE HERO SECTION ADJUSTMENTS */
+/* 🟢 EMAIL SECTION */
+/* -------------------------------------------------- */
+
+#email-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+.email-box {
+  background-color: var(--primary-color-40);
+  border-radius: 24px;
+  padding: 60px;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  overflow: hidden;
+  min-height: 387px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/assets/images/email-section.svg");
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.email-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  gap: 40px;
+  direction: rtl;
+}
+
+.text-box {
+  flex: 1 1 50%;
+  text-align: right;
+}
+
+.text-box h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--main-white);
+  line-height: 1.6;
+}
+
+.text-box p {
+  font-size: 18px;
+  color: var(--main-white);
+  line-height: 1.8;
+  font-weight: 500;
+  width: 75%;
+}
+
+.form-box {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.form-box label {
+  color: var(--main-white);
+  font-weight: 500;
+  margin-bottom: 6px;
+  line-height: 1.8;
+}
+
+.form-box input {
+  margin-bottom: 16px;
+}
+
+.subscribe-btn {
+  border: none;
+  border-radius: 6px;
+  height: 48px;
+  background-color: #fff;
+  color: var(--primary-color);
+  font-family: "Cairo", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color var(--main-transition);
+}
+
+.subscribe-btn:hover {
+  background-color: #f1f1f1;
+}
+
+/* -------------------------------------------------- */
+/* 🟢 Training Section */
+/* -------------------------------------------------- */
+
+.training-section {
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  border-bottom: 1px solid #f1f2f2;
+  padding-bottom: 18px;
+}
+
+.section-header h2,
+.section-header-2 h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--main-black);
+}
+
+.section-header p,
+.section-header-2 p {
+  color: #333333;
+  font-size: 24px;
+  margin-top: 4px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 8px;
+  width: 162px;
+  height: 48px;
+  justify-content: center;
+  text-decoration: none;
+  transition: var(--main-transition);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.view-all-btn:hover {
+  background: var(--primary-color);
+  color: var(--main-white);
+}
+
+/* Swiper styling */
+.training-swiper {
+  width: 100%;
+  padding: 56px 0;
+}
+
+.training-card {
+  background-color: var(--secondary-color);
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  transition: transform 0.3s ease;
+  height: 224px;
+  border: 1px solid #f1f2f2;
+  border-radius: 8px;
+}
+
+.training-card:hover {
+  transform: translateY(-5px);
+}
+
+.training-card img {
+  width: 72px;
+  height: 72px;
+}
+
+.training-card p {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--main-black);
+}
+
+.swiper-pagination-bullet {
+  background: var(--primary-color);
+}
+
+/* -------------------------------------------------- */
+/* 🟢 LEARNING TRIPS */
+/* -------------------------------------------------- */
+
+#learning-trips {
+  margin-bottom: 100px;
+}
+
+.section-header-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tabs-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-pills {
+  background-color: #f7f7f7;
+  padding: 8px;
+  border-radius: 6px;
+  display: flex;
+  gap: 8px;
+}
+
+.nav-pills .nav-item {
+  flex: 0 0 auto;
+}
+
+.nav-pills .nav-link {
+  width: 172px;
+  height: 48px;
+  background-color: transparent;
+  border-radius: 4px;
+  color: var(--secondary-black);
+  font-weight: 700;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--main-transition) ease-in-out;
+}
+
+.nav-pills .nav-link:hover {
+  background-color: var(--main-white);
+  color: var(--primary-color);
+}
+
+.nav-pills .nav-link.active {
+  background-color: var(--main-white);
+  color: var(--primary-color);
+  border-radius: 4px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* -------------------------------------------------- */
+/* 🟣 RESPONSIVE ADJUSTMENTS */
 /* -------------------------------------------------- */
 @media (max-width: 1300px) {
   .hero .hero-text-box {
@@ -255,5 +500,40 @@ html[dir="ltr"] .search-box .form-select {
     height: 100%;
     min-height: 100vh;
     object-fit: cover;
+  }
+}
+
+@media (max-width: 992px) {
+  #email-section {
+    margin-bottom: 60px;
+  }
+  .email-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-box,
+  .form-box {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .email-box {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .training-section {
+    margin-top: 0px;
+    margin-bottom: 35px;
+  }
+
+  .training-swiper {
+    padding: 25px 0;
+  }
+
+  .section-header {
+    padding-bottom: 25px;
   }
 }

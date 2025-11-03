@@ -1,0 +1,387 @@
+/* -------------------------------------------------- */
+/* 🟢 HEADER STYLES */
+/* -------------------------------------------------- */
+
+/* ✅ Full-width sticky header */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--main-white);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: visible;
+}
+
+/* ✅ Header content layout */
+.header-container {
+  height: 82px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  overflow: visible;
+}
+
+/* ✅ Navigation styles */
+header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  gap: 10px;
+  height: 100%;
+  overflow: visible;
+}
+
+header nav ul li {
+  padding: 10px 16px;
+}
+
+header nav ul li a {
+  padding: 10px 0;
+  transition: color var(--main-transition) ease;
+  position: relative;
+}
+
+/* ✅ Hover & active link states */
+header nav ul li > a:hover,
+header nav ul li > a.active {
+  color: var(--primary-color);
+}
+
+header nav ul li > a.active {
+  font-weight: bold;
+}
+
+/* ✅ Underline effect (hover + active) */
+header nav ul li > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width var(--main-transition) ease;
+}
+
+header nav ul li > a:hover::after,
+header nav ul li > a.active::after {
+  width: 70px;
+}
+
+/* -------------------------------------------------- */
+/* 🟢 DROPDOWN MENU */
+/* -------------------------------------------------- */
+
+header nav .dropdown {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Dropdown button styled like nav links */
+header nav .dropdown-toggle {
+  background-color: transparent !important;
+  color: var(--main-gray) !important;
+  font-weight: 500;
+  font-size: 16px;
+  border: none !important;
+  padding: 10px 16px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: color var(--main-transition) ease;
+}
+
+header nav .dropdown-toggle:hover,
+header nav .dropdown-toggle:focus {
+  color: var(--primary-color) !important;
+  box-shadow: none;
+}
+
+/* Dropdown menu styling */
+header nav .dropdown-menu {
+  border: none;
+  border-radius: 0 0 8px 8px;
+  padding: 8px 0;
+  margin-top: 0;
+  min-width: 180px;
+  max-height: none !important;
+  height: auto !important;
+  overflow: visible !important;
+  background-color: var(--main-white);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  text-align: right;
+}
+
+/* Dropdown items */
+header nav .dropdown-item {
+  color: var(--main-gray);
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: background-color var(--main-transition) ease,
+    color var(--main-transition) ease;
+}
+
+header nav .dropdown-item:hover,
+header nav .dropdown-item:focus {
+  background-color: rgba(4, 85, 49, 0.08);
+  color: var(--primary-color);
+}
+
+/* Dropdown arrow */
+header nav .dropdown-toggle::after {
+  margin-inline-start: 6px;
+  vertical-align: middle;
+  border-top-color: var(--main-gray) !important;
+}
+
+header nav .dropdown-toggle:hover::after {
+  border-top-color: var(--primary-color) !important;
+}
+
+/* -------------------------------------------------- */
+/* 🟢 HEADER BUTTONS */
+/* -------------------------------------------------- */
+header .header-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+button i.likes,
+button i.bag {
+  color: #b3b3b3;
+  font-size: 24px;
+  transition: color var(--main-transition) ease;
+}
+
+/* Hover effect for icons */
+button:hover i.likes,
+button:hover i.bag {
+  color: var(--primary-color);
+}
+
+button.lang-btn {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+button.lang-btn:hover {
+  color: var(--primary-color);
+}
+
+/* -------------------------------------------------- */
+/* 🟢 MOBILE MENU TOGGLE - Hidden on 2xl+ */
+/* -------------------------------------------------- */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--main-gray);
+  cursor: pointer;
+  transition: color var(--main-transition) ease;
+}
+
+.mobile-menu-toggle:hover {
+  color: var(--primary-color);
+}
+
+/* -------------------------------------------------- */
+/* 🟢 OFFCANVAS STYLES */
+/* -------------------------------------------------- */
+.offcanvas {
+  --bs-offcanvas-width: 300px;
+}
+
+.offcanvas-header {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 20px;
+}
+
+.offcanvas-body {
+  padding: 0;
+}
+
+.offcanvas-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+ul.offcanvas-nav {
+  padding: 0 !important;
+}
+
+.offcanvas-nav li {
+  padding: 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.offcanvas-nav li a {
+  display: block;
+  padding: 16px 20px;
+  color: var(--main-gray);
+  font-weight: 500;
+  transition: all var(--main-transition) ease;
+}
+
+.offcanvas-nav li a:hover,
+.offcanvas-nav li a.active {
+  background-color: rgba(4, 85, 49, 0.08);
+  color: var(--primary-color);
+}
+
+.offcanvas-nav li a.active {
+  font-weight: bold;
+  border-right: 3px solid var(--primary-color);
+}
+
+/* Offcanvas dropdown */
+.offcanvas-nav .dropdown {
+  height: auto;
+}
+
+.offcanvas-nav .dropdown-toggle {
+  width: 100%;
+  text-align: right;
+  padding: 16px 20px !important;
+  color: var(--main-gray) !important;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.offcanvas-nav .dropdown-menu {
+  position: static !important;
+  transform: none !important;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.offcanvas-nav .dropdown-item {
+  padding: 12px 20px 12px 40px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: start;
+}
+
+.offcanvas-footer {
+  padding: 20px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.offcanvas-footer .main-btn {
+  width: 100%;
+  text-align: center;
+}
+
+.offcanvas-footer .offcanvas-quick-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.offcanvas-footer .icon-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.offcanvas-footer button i.likes,
+.offcanvas-footer button i.bag {
+  color: #b3b3b3;
+  font-size: 24px;
+  transition: color var(--main-transition) ease;
+}
+
+.offcanvas-footer button:hover i.likes,
+.offcanvas-footer button:hover i.bag {
+  color: var(--primary-color);
+}
+
+/* Place the close (X) icon flush to the drawer edge */
+.offcanvas-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.offcanvas .btn-close {
+  position: static;
+  margin: 0;
+}
+
+/* Colorize the close (X) icon */
+.offcanvas-header .btn-close {
+  color: var(--primary-color);
+  opacity: 1;
+}
+
+.offcanvas-header .btn-close:hover,
+.offcanvas-header .btn-close:focus {
+  color: var(--hover-btn-bg);
+  opacity: 1;
+}
+
+.mobile-menu-toggle i {
+  color: var(--primary-color);
+  transition: color var(--main-transition) ease;
+}
+
+.mobile-menu-toggle:hover i {
+  color: var(--hover-btn-bg);
+}
+
+/* -------------------------------------------------- */
+/* 🟢 RESPONSIVE BREAKPOINTS */
+/* -------------------------------------------------- */
+
+/* Show mobile toggle and hide desktop nav for xl and below */
+@media (max-width: 1399px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  .header-btns .lang-btn,
+  .header-btns .main-btn,
+  .header-btns button:has(.likes),
+  .header-btns button:has(.bag) {
+    display: none;
+  }
+
+  .header-container {
+    height: 70px;
+  }
+}
+
+/* Keep desktop layout for 2xl and above (1400px+) */
+@media (min-width: 1400px) {
+  .mobile-menu-toggle {
+    display: none !important;
+  }
+
+  header nav {
+    display: block !important;
+  }
+}

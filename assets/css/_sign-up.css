@@ -1,3 +1,16 @@
+/* =====================================================
+   FILE INDEX
+   -----------------------------------------------------
+   1. General Layout (main.sign-up-page)
+   2. Left Side
+   3. Input Icons (Auto for RTL/LTR)
+   4. Phone Input with Flag
+   5. Checkbox Styles
+   6. Right Side (Image)
+   7. Login & Forgot Password Links
+   8. Responsive Design (Tablets & Mobiles)
+===================================================== */
+
 main.sign-up-page {
   display: flex;
   height: 100vh;
@@ -167,10 +180,9 @@ html[dir="rtl"] .phone-input-wrapper .input-group-text.phone-flag {
 }
 
 .phone-input-wrapper .input-icon-start {
-  display: none; /* Hide the phone icon since we have the flag */
+  display: none;
 }
 
-/* Adjust padding for phone input with flag */
 html[dir="ltr"] .phone-input-wrapper input.phone-with-flag {
   padding-left: 100px;
   padding-right: 16px;
@@ -187,7 +199,6 @@ html[dir="rtl"] .phone-input-wrapper input.phone-with-flag {
   direction: ltr;
 }
 
-/* Ensure phone number displays LTR even in RTL mode */
 .phone-input-wrapper input.phone-with-flag {
   direction: ltr;
   text-align: left;
@@ -197,6 +208,9 @@ html[dir="rtl"] .phone-input-wrapper input.phone-with-flag {
   text-align: right;
 }
 
+/* -------------------------------
+   Checkbox Styles
+--------------------------------*/
 .check-box {
   display: flex;
   align-items: center !important;
@@ -211,12 +225,10 @@ html[dir="rtl"] .phone-input-wrapper input.phone-with-flag {
   height: 18px;
 }
 
-/* Remove Bootstrap's default focus glow */
 .custom-check:focus {
   box-shadow: none;
 }
 
-/* Checked state: green check + black border */
 .custom-check:checked {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
@@ -235,20 +247,19 @@ html[dir="rtl"] .check-box {
   flex-direction: row-reverse;
 }
 
-/* Fix Bootstrap form-check spacing/alignment in RTL so label doesn't sit on checkbox */
 html[dir="rtl"] .form-check {
-  padding-right: 1.5em; /* mirror default padding-left */
+  padding-right: 1.5em;
   padding-left: 0;
 }
 
 html[dir="rtl"] .form-check .form-check-input {
-  float: right; /* mirror default float-left */
-  margin-right: -1.5em; /* mirror default margin-left */
+  float: right;
+  margin-right: -1.5em;
   margin-left: 0;
 }
 
 html[dir="rtl"] .form-check .form-check-label {
-  margin-right: 0.25rem; /* small gap from checkbox */
+  margin-right: 0.25rem;
 }
 
 /* -------------------------------
@@ -267,6 +278,9 @@ main.sign-up-page aside:last-child img {
   display: block;
 }
 
+/* -------------------------------
+   Login & Forgot Password Links
+--------------------------------*/
 .login-link {
   display: flex;
   align-items: center;

@@ -74,9 +74,14 @@
   justify-content: center;
   align-items: center;
   border-radius: 100%;
+  cursor: pointer;
 
   & i {
     color: var(--main-gray);
+    transition: color var(--main-transition) ease-in-out;
+  }
+  & i:hover {
+    color: var(--primary-color);
   }
 }
 

@@ -1,80 +1,105 @@
 <header class="site-header">
-    <div class="container header-container">
-        <div class="logo">
-            <img src="/assets/images//logo.svg" alt="logo" />
-        </div>
-
-        <!-- Desktop Navigation (2xl and above) -->
-        <nav>
-            <ul>
-                <li><a href="#" class="active">الرئيسية</a></li>
-                <li><a href="#">من نحن</a></li>
-                <li><a href="#">الدبلومات</a></li>
-                <li><a href="#">الزمالات</a></li>
-                <li><a href="#">الشهادات</a></li>
-                <li><a href="#">المقالات</a></li>
-                <div class="dropdown">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                        تسجيل الطلبات
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">طلب 1</a></li>
-                        <li><a class="dropdown-item" href="#">طلب 2</a></li>
-                        <li><a class="dropdown-item" href="#">طلب 3</a></li>
-                    </ul>
-                </div>
-                <li><a href="#">تواصل معنا</a></li>
-            </ul>
-        </nav>
-
-        <!-- Header Buttons -->
-        <div class="header-btns">
-            <button class="lang-btn">En</button>
-            <button><i class="fa-solid fa-bag-shopping bag"></i></button>
-            <button><i class="fa-regular fa-heart likes"></i></button>
-            <button class="main-btn">تسجيل دخول</button>
-        </div>
-
-        <!-- Mobile Menu Toggle (xl and below) -->
-        <button class="mobile-menu-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-            <i class="fa-solid fa-bars"></i>
-        </button>
+  <div class="container header-container">
+    <div class="logo">
+      <img src="/assets/images/logo.svg" alt="logo" />
     </div>
+
+    <!-- Desktop Navigation (2xl and above) -->
+    <nav>
+      <ul>
+        <li><a href="#" class="active">الرئيسية</a></li>
+        <li><a href="#">من نحن</a></li>
+        <li><a href="courses.html">الدورات</a></li>
+        <li><a href="#">الدبلومات</a></li>
+        <li><a href="#">الزمالات</a></li>
+        <li><a href="#">الشهادات</a></li>
+        <li><a href="#">المقالات</a></li>
+        <div class="dropdown">
+          <a
+            class="btn btn-secondary dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+          >
+            تسجيل الطلبات
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">طلب 1</a></li>
+            <li><a class="dropdown-item" href="#">طلب 2</a></li>
+            <li><a class="dropdown-item" href="#">طلب 3</a></li>
+          </ul>
+        </div>
+        <li><a href="#">تواصل معنا</a></li>
+      </ul>
+    </nav>
+
+    <!-- Header Buttons -->
+    <div class="header-btns">
+      <button class="lang-btn">En</button>
+      <button><i class="fa-solid fa-bag-shopping bag"></i></button>
+      <button><i class="fa-regular fa-heart likes"></i></button>
+      <button class="main-btn">
+        <a href="login.html"> تسجيل دخول </a>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Toggle (xl and below) -->
+    <button
+      class="mobile-menu-toggle"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#mobileMenu"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
 </header>
 
 <!-- Offcanvas Mobile Menu -->
 <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title">القائمة</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-        <ul class="offcanvas-nav">
-            <li><a href="#" class="active">الرئيسية</a></li>
-            <li><a href="#">من نحن</a></li>
-            <li><a href="#">الدبلومات</a></li>
-            <li><a href="#">الزمالات</a></li>
-            <li><a href="#">الشهادات</a></li>
-            <li><a href="#">المقالات</a></li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                    تسجيل الطلبات
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">طلب 1</a></li>
-                    <li><a class="dropdown-item" href="#">طلب 2</a></li>
-                    <li><a class="dropdown-item" href="#">طلب 3</a></li>
-                </ul>
-            </li>
-            <li><a href="#">تواصل معنا</a></li>
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">القائمة</h5>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+    ></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="offcanvas-nav">
+      <li><a href="#" class="active">الرئيسية</a></li>
+      <li><a href="#">من نحن</a></li>
+      <li><a href="courses.html">الدورات</a></li>
+      <li><a href="#">الدبلومات</a></li>
+      <li><a href="#">الزمالات</a></li>
+      <li><a href="#">الشهادات</a></li>
+      <li><a href="#">المقالات</a></li>
+      <li class="dropdown">
+        <a
+          class="dropdown-toggle"
+          href="#"
+          role="button"
+          data-bs-toggle="dropdown"
+        >
+          تسجيل الطلبات
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">طلب 1</a></li>
+          <li><a class="dropdown-item" href="#">طلب 2</a></li>
+          <li><a class="dropdown-item" href="#">طلب 3</a></li>
         </ul>
+      </li>
+      <li><a href="#">تواصل معنا</a></li>
+    </ul>
+  </div>
+  <div class="offcanvas-footer">
+    <div class="offcanvas-quick-actions">
+      <button class="lang-btn">En</button>
+      <button><i class="fa-regular fa-heart likes"></i></button>
+      <button><i class="fa-solid fa-bag-shopping bag"></i></button>
     </div>
-    <div class="offcanvas-footer">
-        <div class="offcanvas-quick-actions">
-            <button class="lang-btn">En</button>
-            <button><i class="fa-regular fa-heart likes"></i></button>
-            <button><i class="fa-solid fa-bag-shopping bag"></i></button>
-        </div>
-        <button class="main-btn">تسجيل دخول</button>
-    </div>
+    <button class="main-btn">
+      <a href="login.html"> تسجيل دخول </a>
+    </button>
+  </div>
 </div>

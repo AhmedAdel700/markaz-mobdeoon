@@ -366,6 +366,14 @@ html[dir="ltr"] .search-box .form-select {
 }
 
 /* -------------------------------------------------- */
+/* 🟢 BLOGS SECTION */
+/* -------------------------------------------------- */
+
+#blogs {
+  margin-bottom: 100px;
+}
+
+/* -------------------------------------------------- */
 /* 🟢 OUR PARTNERS SECTION */
 /* -------------------------------------------------- */
 
@@ -422,6 +430,44 @@ html[dir="ltr"] .search-box .form-select {
 }
 
 .partner-box .box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  padding: 16px;
+}
+
+/* Swiper version of partners layout */
+.partners-swiper {
+  width: 100%;
+  padding: 16px 0 0 0; /* align with other swipers */
+}
+
+.partners-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.partners-swiper .box {
+  background-color: #fbfcfc; /* white like before */
+  width: 100%;
+  max-width: 280px;
+  height: 140px;
+  border: var(--border-1);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.partners-swiper .box:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.partners-swiper .box img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
@@ -734,6 +780,10 @@ html[dir="ltr"] .email-box::before {
 
   /* Training */
   /* (no rules) */
+
+  #blogs {
+    margin-bottom: 30px;
+  }
 
   /* Learning Trips */
   #learning-trips {

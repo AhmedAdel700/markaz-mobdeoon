@@ -168,32 +168,372 @@
 }
 
 .course-tabs {
-  background-color: #fff;
-  border: 1px solid #eee;
-  border-radius: 12px;
-  padding: 24px;
+  border: var(--border-1);
+  border-radius: 16px;
+  margin-top: 40px;
 }
 
 .course-tabs .nav-tabs {
-  border-bottom: 1px solid #eee;
+  border-bottom: var(--border-1);
+  height: 56px;
+  display: flex;
+  justify-content: flex-start !important;
+  align-items: center;
+  gap: 8px;
+
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  overflow-y: hidden;
+  scrollbar-width: thin; /* for Firefox */
+  -webkit-overflow-scrolling: touch; /* smooth scroll for mobile */
+}
+
+/* Optional: hide scrollbar visually (still scrollable) */
+.course-tabs .nav-tabs::-webkit-scrollbar {
+  height: 6px;
+}
+.course-tabs .nav-tabs::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+/* Prevent tab buttons from shrinking */
+.course-tabs .nav-item {
+  flex: 0 0 auto !important;
+}
+
+.nav-item {
+  padding: 0 !important;
+  width: 148px;
 }
 
 .course-tabs .nav-link {
-  color: var(--main-black);
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 14px;
   border: none;
-  border-bottom: 3px solid transparent;
-  margin: 0 8px;
+  border-bottom: 2px solid transparent;
+  width: 100%;
+  color: var(--main-gray);
 }
 
 .course-tabs .nav-link.active {
   color: var(--primary-color);
   border-bottom-color: var(--primary-color);
   background-color: transparent;
+  height: 56.5px;
+  transition: all var(--main-transition) ease-in-out;
+}
+
+.course-tabs .nav-link.active:hover {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+  background-color: transparent;
+  height: 56.5px;
+}
+
+.course-tabs .nav-link:hover {
+  color: var(--primary-color);
+  border-bottom-color: transparent;
+  background-color: transparent;
+  height: 56.5px;
 }
 
 .course-tabs .tab-content {
-  padding: 24px 8px;
+  margin: 0;
+  padding: 24px;
+}
+
+.tab-description h5 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.tab-description h5:last-of-type {
+  margin-top: 1rem;
+}
+
+.tab-description ul {
+  list-style-type: disc;
+  padding-inline-start: 0.9rem;
+  margin-top: 1rem;
+}
+
+.tab-description ul li {
+  color: var(--main-gray);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2;
+}
+
+.tab-description ul li::marker {
+  color: var(--main-gray);
+  font-size: 0.7rem;
+}
+
+.courese-video {
+  border-radius: var(--border-r-8);
+  width: 100%;
+  height: 100%;
+}
+
+.courese-video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.content-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+ul.content-list {
+  padding: 0 !important;
+}
+
+.content-list > li {
+  border: var(--border-1);
+  border-radius: var(--border-r-8);
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--main-black);
+}
+
+/* 🔹 Container Grid */
+.trainers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, auto));
+  gap: 15px;
+  justify-content: start;
+}
+
+/* 🔹 Trainer Card */
+.tranier-card {
+  border: var(--border-2);
+  border-radius: var(--border-r-8);
+  padding: 8px;
+  text-align: start;
+  width: 100%;
+  max-width: 280px;
+  height: 310px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.tranier-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tranier-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--border-r-8);
+}
+
+.tranier-card .card-body {
+  max-height: fit-content;
+}
+
+.tranier-card .card-body h6 {
+  font-weight: 700;
+  color: var(--main-black);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.tranier-card .card-body p {
+  font-weight: 700;
+  color: var(--main-gray);
+  font-size: 16px;
+}
+
+/* 🟢 FAQ Section */
+.accordion {
+  padding: 0;
+}
+.accordion-button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center;
+}
+
+/* Accordion item */
+.accordion-item {
+  border: none !important;
+  margin-bottom: 16px;
+  border: var(--border-1) !important;
+  border-radius: 16px !important;
+}
+
+.accordion-item:has(.show) {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Accordion button */
+.accordion-button {
+  background-color: #fbfbfb;
+  color: var(--main-black);
+  font-weight: 700;
+  text-align: start;
+  border-radius: 16px !important;
+  box-shadow: none;
+  padding: 16px 24px !important;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Hover / expanded */
+.accordion-button:not(.collapsed) {
+  background-color: var(--main-white);
+  color: var(--main-black);
+}
+
+/* Accordion body */
+.accordion-body {
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Answer layout */
+.faq-answer {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 0 20px 20px 20px;
+  background-color: transparent !important;
+}
+
+/* Default arrow styles */
+.faq-icon {
+  color: var(--primary-color);
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) .faq-icon {
+  background-color: var(--primary-color);
+  color: var(--main-white);
+  border-color: var(--primary-color);
+  transform: rotate(-45deg);
+}
+
+html[dir="ltr"] .faq-icon {
+  transform: scale(-1);
+}
+
+/* Optional: rotate arrow when open */
+.accordion-button:not(.collapsed) .arrow-dir {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.faq-answer p {
+  margin: 0;
+  flex: 1;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--secondary-gray);
+}
+
+/* Remove focus outline */
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+/* 🟢 Reviews Section */
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.review-item {
+  border-radius: var(--border-r-8);
+  border: var(--border-1);
+  padding: 24px;
+}
+
+/* Reviewer header */
+.review-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.review-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.review-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Name + date */
+.review-name {
+  font-weight: 500;
+  color: var(--main-black);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.review-header small {
+  font-size: 13px;
+}
+
+/* Rating line */
+.review-rating {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.review-rating span {
+  font-size: 16px;
+  color: var(--main-black);
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.stars i {
+  font-size: 15px;
+  color: #e58c22;
+}
+
+/* Review text */
+.review-text {
+  color: var(--main-gray);
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 0;
+  margin-top: 24px;
+  font-size: 400;
 }
 
 /* =======================================
@@ -234,5 +574,24 @@
 
   .course-btns button {
     width: 100% !important;
+  }
+}
+
+/* 🔹 Responsive: Full width cards on small screens */
+@media (max-width: 1024px) {
+  .trainers-grid {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .trainers-grid {
+    grid-template-columns: 1fr; /* one card per row */
+    justify-content: stretch; /* make it fill the full width */
+  }
+
+  .tranier-card {
+    max-width: 100%; /* allow card to expand fully */
+    height: auto; /* optional: let height adjust naturally */
   }
 }

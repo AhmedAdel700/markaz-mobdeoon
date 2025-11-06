@@ -82,7 +82,7 @@
                     </button>
                     <button class="view-all-btn">
                         <a href="#">عرض شهادة الدورة</a>
-                        <i class="fa-solid fa-arrow-left arrow-dir"></i>
+                        <i class="fa-solid fa-arrow-left"></i>
                     </button>
                 </div>
             </aside>
@@ -90,10 +90,10 @@
         <!-- End Of Info Section -->
 
         <!-- Start Of Tabs Section -->
-        <section class="course-tabs mt-5">
+        <section class="course-tabs">
 
             <!-- Tabs Navigation -->
-            <ul class="nav nav-tabs justify-content-center mb-4" id="courseTabs" role="tablist">
+            <ul class="nav nav-tabs justify-content-center" id="courseTabs" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="desc-tab" data-bs-toggle="tab" data-bs-target="#desc"
                         type="button" role="tab">الوصف</button>
@@ -121,101 +121,254 @@
 
                 <!-- 🟢 Description Tab -->
                 <div class="tab-pane fade show active" id="desc" role="tabpanel">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <h5 class="fw-bold mt-3 mt-lg-0">نظرة عامة</h5>
-                            <p>تهدف الدورة إلى تزويد المتدربين بالمعرفة والمهارات اللازمة لاستخدام تطبيقات Oracle ...
-                            </p>
-
-                            <h5 class="fw-bold mt-4">الأهداف</h5>
+                    <div class="row g-2">
+                        <div class="col-lg-6 tab-description">
+                            <h5>نظرة عامة</h5>
                             <ul>
-                                <li>التعرف على مكونات نظام Oracle Financials ERP.</li>
-                                <li>فهم كيفية إدارة الحسابات العامة.</li>
-                                <li>إعداد الميزانيات ومتابعة التدفقات النقدية.</li>
-                                <li>استخدام أدوات Oracle لإعداد التحليلات.</li>
+                                <li>تهدف الدورة إلى تزويد المتدربين بالمعرفة والمهارات اللازمة لاستخدام تطبيقات Oracle
+                                    Fin في إدارة الحسابات، إعداد
+                                    الميزانيات، متابعة الإيرادات والمصروفات، وإصدار التقارير المالية الدقيقة لدعم عملية
+                                    اتخاذ القرار</li>
+                            </ul>
+
+                            <h5>الأهداف</h5>
+                            <ul>
+                                <li>التعرف على مكونات نظام Oracle Financials ERP.</li>
+                                <li>فهم كيفية إدارة الحسابات العامة (General Ledger).</li>
+                                <li>تطبيق إجراءات الذمم الدائنة والذمم المدينة (Accounts Payable & Accounts Receivable)
+                                </li>
+                                <li>عداد الميزانيات ومتابعة التدفقات النقدية (Cash Management).</li>
+                                <li>نشاء وإدارة أصول الشركة (Fixed Assets Management).</li>
+                                <li>استخدام أدوات Oracle لإعداد التقارير المالية الدقيقة والتحليلات.</li>
+                                <li>تعزيز مهارات المتدرب في تطبيق أنظمة ERP لدعم كفاءة العمل المالي والمحاسبي.</li>
                             </ul>
                         </div>
 
                         <div class="col-lg-6">
-                            <div
-                                class="ratio ratio-16x9 bg-light rounded d-flex align-items-center justify-content-center">
-                                <i class="fa-solid fa-play text-success fs-3"></i>
+                            <div class="courese-video ratio ratio-16x9 overflow-hidden">
+                                <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Course Introduction Video"
+                                    allowfullscreen>
+                                </iframe>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
                 <!-- 🟢 Content Tab -->
                 <div class="tab-pane fade" id="content" role="tabpanel">
-                    <ul class="list-group">
-                        <li class="list-group-item">اكتب هنا عنوان المحاضرة الأولى</li>
-                        <li class="list-group-item">اكتب هنا عنوان المحاضرة الثانية</li>
-                        <li class="list-group-item">اكتب هنا عنوان المحاضرة الثالثة</li>
-                        <li class="list-group-item">اكتب هنا عنوان المحاضرة الرابعة</li>
+                    <ul class="content-list">
+                        <li>اكتب هنا عنوان المحاضرة الأولى</li>
+                        <li>اكتب هنا عنوان المحاضرة الثانية</li>
+                        <li>اكتب هنا عنوان المحاضرة الثالثة</li>
+                        <li>اكتب هنا عنوان المحاضرة الرابعة</li>
                     </ul>
                 </div>
 
                 <!-- 🟢 Trainers Tab -->
                 <div class="tab-pane fade" id="trainers" role="tabpanel">
-                    <div class="row gy-3 justify-content-center">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="card text-center border-0">
-                                <img src="assets/images/trainer.png" class="card-img-top rounded" alt="trainer">
-                                <div class="card-body">
-                                    <h6 class="fw-bold mb-1">د. حسن محمد الجبع</h6>
-                                    <p class="text-muted mb-0">CMA, CISA</p>
-                                </div>
+                    <div class="trainers-grid">
+                        <div class="tranier-card">
+                            <img src="assets/images/trainer.jpg" class="card-img-top rounded" alt="trainer image">
+                            <div class="card-body">
+                                <h6 class="mb-1">ا. حسان محمد الجدع </h6>
+                                <p class="text-muted mb-0">CMA, CISA</p>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="card text-center border-0">
-                                <img src="assets/images/trainer.png" class="card-img-top rounded" alt="trainer">
-                                <div class="card-body">
-                                    <h6 class="fw-bold mb-1">د. حسن محمد الجبع</h6>
-                                    <p class="text-muted mb-0">CMA, CISA</p>
-                                </div>
+
+                        <div class="tranier-card">
+                            <img src="assets/images/trainer.jpg" class="card-img-top rounded" alt="trainer image">
+                            <div class="card-body">
+                                <h6 class="mb-1">ا. حسان محمد الجدع </h6>
+                                <p class="text-muted mb-0">CMA, CISA</p>
                             </div>
                         </div>
+
+                        <div class="tranier-card">
+                            <img src="assets/images/trainer.jpg" class="card-img-top rounded" alt="trainer image">
+                            <div class="card-body">
+                                <h6 class="mb-1">ا. حسان محمد الجدع </h6>
+                                <p class="text-muted mb-0">CMA, CISA</p>
+                            </div>
+                        </div>
+
+                        <div class="tranier-card">
+                            <img src="assets/images/trainer.jpg" class="card-img-top rounded" alt="trainer image">
+                            <div class="card-body">
+                                <h6 class="mb-1">ا. حسان محمد الجدع </h6>
+                                <p class="text-muted mb-0">CMA, CISA</p>
+                            </div>
+                        </div>
+
+                        <div class="tranier-card">
+                            <img src="assets/images/trainer.jpg" class="card-img-top rounded" alt="trainer image">
+                            <div class="card-body">
+                                <h6 class="mb-1">ا. حسان محمد الجدع </h6>
+                                <p class="text-muted mb-0">CMA, CISA</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
                 <!-- 🟢 FAQ Tab -->
                 <div class="tab-pane fade" id="faq" role="tabpanel">
                     <div class="accordion" id="faqAccordion">
+
+                        <!-- Question 1 -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne">
                                     هل يمكنني الانضمام إذا كنت مبتدئًا تمامًا؟
+                                    <span class="faq-icon"><i class="fa-solid fa-arrow-left arrow-dir"></i></span>
                                 </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse show"
                                 data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    نعم، هذه الدورة مصممة للمبتدئين...
+                                    <div class="faq-answer">
+                                        <p>
+                                            نعم، هذه الدورة مصممة للمبتدئين. ستتعلم فيها كل ما تحتاجه من الأساسيات إلى
+                                            المهارات
+                                            المتقدمة.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Question 2 -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseTwo">
-                                    هل أحتاج إلى خبرة سابقة؟
+                                    هل أحتاج إلى خبرة سابقة قبل التسجيل؟
+                                    <span class="faq-icon"><i class="fa-solid fa-arrow-left arrow-dir"></i></span>
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    لا، سيتم شرح كل المفاهيم من البداية.
+                                    <div class="faq-answer">
+                                        <p>
+                                            لا، الدورة تبدأ من الصفر وتركز على بناء مهاراتك خطوة بخطوة حتى تصل إلى مستوى
+                                            متقدم.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Question 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree">
+                                    كم مدة الدورة التدريبية؟
+                                    <span class="faq-icon"><i class="fa-solid fa-arrow-left arrow-dir"></i></span>
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <div class="faq-answer">
+                                        <p>
+                                            تعتمد مدة الدورة على محتواها، ولكن في الغالب تمتد من 4 إلى 6 أسابيع مع مهام
+                                            وتطبيقات عملية.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour">
+                                    هل سأتلقى شهادة بعد انتهاء الدورة؟
+                                    <span class="faq-icon"><i class="fa-solid fa-arrow-left arrow-dir"></i></span>
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <div class="faq-answer">
+                                        <p>
+                                            نعم، بعد إكمال جميع الدروس والاختبارات النهائية ستحصل على شهادة إتمام معتمدة
+                                            من المنصة.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
                 <!-- 🟢 Reviews Tab -->
                 <div class="tab-pane fade" id="reviews" role="tabpanel">
-                    <p class="text-center text-muted py-5">لا توجد تقييمات بعد.</p>
+                    <div class="reviews-list">
+
+                        <!-- Review 1 -->
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="review-box">
+                                    <img src="assets/images/trainer.jpg" alt="user image" class="review-avatar">
+                                    <div>
+                                        <h6 class="review-name mb-0">كاظم الصميدي</h6>
+                                        <small class="text-muted">1 يناير 2025</small>
+                                    </div>
+                                </div>
+
+                                <div class="review-rating">
+                                    <div class="stars">
+                                        <i class="fa-regular fa-star text-warning"></i>
+                                        <i class="fa-regular fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                    </div>
+
+                                    <span>3.0 تقييم</span>
+
+                                </div>
+                            </div>
+                            <p class="review-text">
+                                الدورة كانت ممتازة، الشرح واضح والتطبيق العملي ساعدني على استيعاب المفاهيم بسهولة.
+                            </p>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="review-box">
+                                    <img src="assets/images/trainer.jpg" alt="user image" class="review-avatar">
+                                    <div>
+                                        <h6 class="review-name mb-0">كاظم الصميدي</h6>
+                                        <small class="text-muted">1 يناير 2025</small>
+                                    </div>
+                                </div>
+
+                                <div class="review-rating">
+                                    <div class="stars">
+                                        <i class="fa-regular fa-star text-warning"></i>
+                                        <i class="fa-regular fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                    </div>
+
+                                    <span>3.0 تقييم</span>
+
+                                </div>
+                            </div>
+                            <p class="review-text">
+                                الدورة كانت ممتازة، الشرح واضح والتطبيق العملي ساعدني على استيعاب المفاهيم بسهولة.
+                            </p>
+                        </div>
+
+                    </div>
                 </div>
+
             </div>
         </section>
         <!-- End Of Tabs Section -->

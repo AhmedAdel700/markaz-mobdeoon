@@ -36,20 +36,31 @@
     });
 })();
 
-// 🟢 Learning Trips Swiper
+// 🟢 Learning Trips Swipers (all tabs)
 (() => {
-    const container = document.querySelector('.learning-trips-swiper');
-    if (!container) return;
-    new Swiper(container, {
-        slidesPerView: 1.2,
-        spaceBetween: 16,
-        grabCursor: true,
-        loop: true,
-        breakpoints: {
-            640: { slidesPerView: 2 },
-            992: { slidesPerView: 3 },
-            1280: { slidesPerView: 4 },
-        },
+    const containers = document.querySelectorAll('.learning-trips-swiper');
+    if (!containers.length) return;
+    containers.forEach((container) => {
+        new Swiper(container, {
+            slidesPerView: 1.2,
+            spaceBetween: 16,
+            grabCursor: true,
+            loop: true,
+            breakpoints: {
+                640: { slidesPerView: 2 },
+                992: { slidesPerView: 3 },
+                1280: { slidesPerView: 4 },
+            },
+        });
+    });
+
+    // Ensure swipers recalc when a tab becomes visible
+    document.addEventListener('shown.bs.tab', function () {
+        containers.forEach((c) => {
+            if (c && c.swiper && typeof c.swiper.update === 'function') {
+                c.swiper.update();
+            }
+        });
     });
 })();
 

@@ -259,11 +259,19 @@ html[dir="ltr"] .search-box .form-select {
   gap: 16px;
 }
 
-.tabs-box {
+.learning-trips .tabs-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 6px;
+}
+
+.tabs-header {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
 }
 
 .nav-pills {
@@ -306,6 +314,7 @@ html[dir="ltr"] .search-box .form-select {
 
 .h-line {
   border-top: var(--border-1);
+  margin: 0;
 }
 
 .cards-box {

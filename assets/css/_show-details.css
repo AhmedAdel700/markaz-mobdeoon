@@ -53,6 +53,14 @@
   object-fit: contain;
 }
 
+.cart,
+.favoraite {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  place-items: center;
+}
+
 @media (max-width: 1200px) {
   .details-section-container {
     grid-template-columns: repeat(4, 1fr);

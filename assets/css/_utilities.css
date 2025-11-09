@@ -250,3 +250,39 @@
 html[dir="ltr"] .arrow-dir {
   transform: rotate(180deg);
 }
+
+/* -------------------------------------------------- */
+/* 🟢 EMPTY STATE */
+/* -------------------------------------------------- */
+
+.empty-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+}
+
+.empty-state p,
+.empty-state h3 {
+  margin: 0;
+}
+
+.empty-state h3 {
+  font-size: clamp(20px, 2vw + 1rem, 32px);
+  color: var(--main-black);
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.empty-state p {
+  font-size: clamp(14px, 1vw + 0.5rem, 16px);
+  color: var(--main-gray);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.empty-state button {
+  max-width: 200px;
+}

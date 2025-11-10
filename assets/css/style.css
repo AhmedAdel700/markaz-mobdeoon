@@ -14,6 +14,7 @@
 /* Pages & Components */
 @import url("_header.css");
 @import url("_home.css");
+@import url("_about.css");
 @import url("_sign-up.css");
 @import url("_courses.css");
 @import url("_courses-details.css");

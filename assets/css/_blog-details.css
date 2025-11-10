@@ -21,7 +21,7 @@
 .blog-details-img {
   position: relative;
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: var(--border-r-16);
   height: fit-content;
 }
 
@@ -92,7 +92,7 @@
   justify-content: flex-start;
   flex-direction: column;
   padding: 40px 24px;
-  border-radius: 16px;
+  border-radius: var(--border-r-16);
   border: var(--border-3);
   max-height: fit-content;
 }

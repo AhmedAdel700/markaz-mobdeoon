@@ -357,6 +357,19 @@ ul.offcanvas-nav {
   color: var(--main-black) !important;
 }
 
+header .dropdown-menu {
+  padding: 0 !important;
+  padding-bottom: 5px !important;
+}
+
+header .dropdown-menu li {
+  padding: 0 !important;
+}
+
+header .dropdown-menu a {
+  padding: 1rem !important;
+}
+
 /* -------------------------------------------------- */
 /* 🟢 RESPONSIVE BREAKPOINTS */
 /* -------------------------------------------------- */

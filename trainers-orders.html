@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>King Khalid University</title>
+
+    <!-- CSS Files And CDNs-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css"
+        crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+        integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <!-- Start Of Header -->
+    <div id="header"></div>
+    <!-- End Of Header -->
+
+    <main class="main-courses-details container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+                <li class="breadcrumb-item">تسجيل الطلبات</li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    تسجيل طلبات المدربين</li>
+            </ol>
+        </nav>
+
+        <!-- Start Of The Order Form Section -->
+        <section class="order-from">
+            <h2 class="order-title">يرجى ادخال البيانات وسيتم التواصل معكم قريبا...</h2>
+            <form action="#">
+
+                <!-- Full Name -->
+                <div class="input-group">
+                    <label for="full-name" class="w-100 mb-1">الاسم الكامل</label>
+                    <input id="full-name" type="text" class="form-control" placeholder="اكتب الاسم الأول هنا" />
+                </div>
+
+                <!-- Email -->
+                <div class="input-group">
+                    <label for="email" class="w-100 mb-1">البريد الإلكتروني</label>
+                    <input id="email" type="email" class="form-control" placeholder="اكتب بريدك الإلكتروني هنا" />
+                </div>
+
+                <!-- Phone -->
+                <div class="input-group">
+                    <label for="phone" class="w-100 mb-1">رقم الهاتف</label>
+                    <div class="phone-input-wrapper">
+                        <span class="input-group-text phone-flag" id="phone-flag">
+                            <img src="https://flagcdn.com/w40/sa.png" alt="SA" class="flag-icon" />
+                            <span class="country-code">+966</span>
+                        </span>
+                        <input id="phone" type="text" class="form-control phone-with-flag" placeholder="000 000 000" />
+                    </div>
+                </div>
+
+                <!-- National ID -->
+                <div class="input-group">
+                    <label for="national-id" class="w-100 mb-1">رقم الهوية</label>
+                    <input id="national-id" type="text" class="form-control" placeholder="اكتب رقم الهوية هنا" />
+                </div>
+
+                <!-- Job Title -->
+                <div class="input-group">
+                    <label for="job-title" class="w-100 mb-1">المسمى الوظيفي</label>
+                    <input id="job-title" type="text" class="form-control" placeholder="اكتب المسمى الوظيفي هنا" />
+                </div>
+
+                <!-- Nationality -->
+                <div class="dropdown-center">
+                    <label for="nationality" class="mb-1">الجنسية</label>
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        اختر جنسيتك
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">سعودي</a></li>
+                        <li><a class="dropdown-item" href="#">غير سعودي</a></li>
+                    </ul>
+                </div>
+
+                <!-- Major -->
+                <div class="dropdown-center">
+                    <label for="major" class="mb-1">التخصص</label>
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        اختر التخصص
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">علوم الحاسب</a></li>
+                        <li><a class="dropdown-item" href="#">إدارة الأعمال</a></li>
+                        <li><a class="dropdown-item" href="#">الموارد البشرية</a></li>
+                        <li><a class="dropdown-item" href="#">التربية</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sub Major -->
+                <div class="dropdown-center">
+                    <label for="sub-major" class="mb-1">التخصص الفرعي</label>
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        اختر التخصص الفرعي
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">تحليل البيانات</a></li>
+                        <li><a class="dropdown-item" href="#">التسويق الرقمي</a></li>
+                        <li><a class="dropdown-item" href="#">المحاسبة</a></li>
+                        <li><a class="dropdown-item" href="#">تقنيات التعليم</a></li>
+                    </ul>
+                </div>
+
+                <!-- Birth Date -->
+                <div class="input-group">
+                    <label for="birthdate" class="w-100 mb-1">تاريخ الميلاد</label>
+                    <input id="birthdate" type="date" class="form-control" />
+                </div>
+
+                <!-- Upload Certificate -->
+                <div class="input-group input-group-full upload-box">
+                    <label for="certificate" class="w-100 mb-1">رفع الشهادة</label>
+                    <div class="upload-area text-center">
+                        <i class="fa-solid fa-cloud-arrow-up fa-2x mb-2"></i>
+                        <p class="upload-text mb-1">
+                            <strong><a href="#" class="upload-link">اضغط هنا لرفع المرفق</a></strong>
+                        </p>
+                        <p class="text-muted small">
+                            الحد الأقصى لحجم الملف المسموح به هو ٢
+                            <br>
+                            ميجابايت، والصيغ المدعومة تشمل PDF
+                        </p>
+                        <input type="file" id="certificate" hidden />
+                    </div>
+                </div>
+
+
+                <!-- Submit Button -->
+                <button class="main-btn mt-3">أرسل الطلب</button>
+
+                <!-- Terms Checkbox -->
+                <div class="form-check">
+                    <input class="form-check-input custom-check" type="checkbox" value="" id="checkDefault" />
+                    <label class="form-check-label" for="checkDefault">
+                        أنا أوافق على الشروط والأحكام، وسياسة الدعم الفني
+                    </label>
+                </div>
+
+            </form>
+
+        </section>
+        <!-- End Of The Order Form Section -->
+
+    </main>
+
+    <!-- Start Of Footer -->
+    <div id="footer"></div>
+    <!-- End Of Footer -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+
+    <!-- Load Header & Footer -->
+    <script>
+        $(function () {
+            $("#header").load("partials/header.html");
+            $("#footer").load("partials/footer.html");
+        });
+    </script>
+
+    <!-- Upload JS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const uploadArea = document.querySelector(".upload-area");
+            const fileInput = document.getElementById("certificate");
+
+            if (uploadArea && fileInput) {
+                uploadArea.addEventListener("click", () => fileInput.click());
+            }
+        });
+    </script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

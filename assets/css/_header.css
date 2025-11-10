@@ -75,78 +75,6 @@ header nav ul li > a.active::after {
 }
 
 /* -------------------------------------------------- */
-/* 🟢 DROPDOWN MENU */
-/* -------------------------------------------------- */
-
-header nav .dropdown {
-  position: relative;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-/* Dropdown button styled like nav links */
-header nav .dropdown-toggle {
-  background-color: transparent !important;
-  color: var(--main-gray) !important;
-  font-weight: 500;
-  font-size: 16px;
-  border: none !important;
-  padding: 10px 16px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  transition: color var(--main-transition) ease;
-}
-
-header nav .dropdown-toggle:hover,
-header nav .dropdown-toggle:focus {
-  color: var(--primary-color) !important;
-  box-shadow: none;
-}
-
-/* Dropdown menu styling */
-header nav .dropdown-menu {
-  border: none;
-  border-radius: 0 0 8px 8px;
-  padding: 8px 0;
-  margin-top: 0;
-  min-width: 180px;
-  max-height: none !important;
-  height: auto !important;
-  overflow: visible !important;
-  background-color: var(--main-white);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-  text-align: right;
-}
-
-/* Dropdown items */
-header nav .dropdown-item {
-  color: var(--main-gray);
-  padding: 10px 20px;
-  font-weight: 500;
-  transition: background-color var(--main-transition) ease,
-    color var(--main-transition) ease;
-}
-
-header nav .dropdown-item:hover,
-header nav .dropdown-item:focus {
-  background-color: rgba(4, 85, 49, 0.08);
-  color: var(--primary-color);
-}
-
-/* Dropdown arrow */
-header nav .dropdown-toggle::after {
-  margin-inline-start: 6px;
-  vertical-align: middle;
-  border-top-color: var(--main-gray) !important;
-}
-
-header nav .dropdown-toggle:hover::after {
-  border-top-color: var(--primary-color) !important;
-}
-
-/* -------------------------------------------------- */
 /* 🟢 HEADER BUTTONS */
 /* -------------------------------------------------- */
 header .header-btns {
@@ -351,23 +279,6 @@ ul.offcanvas-nav {
 
 .mobile-menu-toggle:hover i {
   color: var(--hover-btn-bg);
-}
-
-.dropdown a.dropdown-toggle {
-  color: var(--main-black) !important;
-}
-
-header .dropdown-menu {
-  padding: 0 !important;
-  padding-bottom: 5px !important;
-}
-
-header .dropdown-menu li {
-  padding: 0 !important;
-}
-
-header .dropdown-menu a {
-  padding: 1rem !important;
 }
 
 /* -------------------------------------------------- */

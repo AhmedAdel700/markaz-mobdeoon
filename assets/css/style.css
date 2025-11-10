@@ -17,10 +17,11 @@
 @import url("_about.css");
 @import url("_sign-up.css");
 @import url("_courses.css");
-@import url("_contact-us.css");
 @import url("_courses-details.css");
+@import url("_contact-us.css");
 @import url("_blog-details.css");
 @import url("_show-details.css");
+@import url("_orders.css");
 @import url("_footer.css");
 
 /* Responsive */

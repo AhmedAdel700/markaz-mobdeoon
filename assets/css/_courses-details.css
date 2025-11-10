@@ -19,7 +19,7 @@
   width: 100%;
   height: 100%;
   border: var(--border-1);
-  border-radius: var(--border-r-16);
+  border-radius: 16px;
 }
 
 .course-details-img .like-icon {
@@ -169,7 +169,7 @@
 
 .course-tabs {
   border: var(--border-1);
-  border-radius: var(--border-r-16);
+  border-radius: 16px;
   margin-top: 40px;
 }
 
@@ -355,10 +355,10 @@ ul.content-list {
 }
 
 /* 🟢 FAQ Section */
-.fqa-container .accordion {
+#faq .accordion {
   padding: 0;
 }
-.fqa-container .accordion-button {
+#faq .accordion-button {
   width: 100%;
   display: flex;
   justify-content: space-between !important;
@@ -366,19 +366,19 @@ ul.content-list {
 }
 
 /* Accordion item */
-.fqa-container .accordion-item {
+#faq .accordion-item {
   border: none !important;
   margin-bottom: 16px;
   border: var(--border-1) !important;
   border-radius: 16px !important;
 }
 
-.fqa-container .accordion-item:has(.show) {
+#faq .accordion-item:has(.show) {
   box-shadow: var(--shadow-lg);
 }
 
 /* Accordion button */
-.fqa-container .accordion-button {
+#faq .accordion-button {
   background-color: #fbfbfb;
   color: var(--main-black);
   font-weight: 700;
@@ -391,20 +391,20 @@ ul.content-list {
 }
 
 /* Hover / expanded */
-.fqa-container .accordion-button:not(.collapsed) {
+#faq .accordion-button:not(.collapsed) {
   background-color: var(--main-white);
   color: var(--main-black);
 }
 
 /* Accordion body */
-.fqa-container .accordion-body {
+#faq .accordion-body {
   padding: 20px;
   font-size: 15px;
   line-height: 1.8;
 }
 
 /* Answer layout */
-.fqa-container .faq-answer {
+#faq .faq-answer {
   display: flex;
   align-items: flex-start;
   gap: 12px;
@@ -413,7 +413,7 @@ ul.content-list {
 }
 
 /* Default arrow styles */
-.fqa-container .faq-icon {
+#faq .faq-icon {
   color: var(--primary-color);
   width: 32px;
   min-width: 32px;
@@ -427,19 +427,19 @@ ul.content-list {
   transition: all 0.3s ease;
 }
 
-.fqa-container .accordion-button:not(.collapsed) .faq-icon {
+#faq .accordion-button:not(.collapsed) .faq-icon {
   background-color: var(--primary-color);
   color: var(--main-white);
   border-color: var(--primary-color);
   transform: rotate(-45deg);
 }
 
-html[dir="ltr"] .fqa-container .faq-icon {
+html[dir="ltr"] #faq .faq-icon {
   transform: scale(-1);
 }
 
 /* Optional: rotate arrow when open */
-.fqa-container .accordion-button:not(.collapsed) .arrow-dir {
+#faq .accordion-button:not(.collapsed) .arrow-dir {
   transform: rotate(0deg);
   transition: transform 0.3s ease;
 }
@@ -453,7 +453,7 @@ html[dir="ltr"] .fqa-container .faq-icon {
 }
 
 /* Remove focus outline */
-.fqa-container .accordion-button:focus {
+#faq .accordion-button:focus {
   box-shadow: none;
 }
 

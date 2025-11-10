@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>King Khalid University</title>
+
+    <!-- CSS Files And CDNs-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css"
+        crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+        integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <!-- Start Of Header -->
+    <div id="header"></div>
+    <!-- End Of Header -->
+
+    <main class="main-courses-details container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+                <li class="breadcrumb-item">تسجيل الطلبات</li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    تسجيل طلبات الشركات</li>
+            </ol>
+        </nav>
+
+        <!-- Start Of The Order Form Section -->
+        <section class="order-from">
+            <h2 class="order-title">يرجى ادخال البيانات وسيتم التواصل معكم قريبا...</h2>
+            <form action="#">
+                <!-- Company Name -->
+                <div class="input-group">
+                    <label for="company-name" class="w-100 mb-1">اسم الشركة</label>
+                    <input id="company-name" type="text" class="form-control" placeholder="اكتب اسم الشركة هنا" />
+                </div>
+
+                <!-- Activity Name -->
+                <div class="input-group">
+                    <label for="activity-name" class="w-100 mb-1">اسم النشاط</label>
+                    <input id="activity-name" type="text" class="form-control" placeholder="اكتب اسم النشاط هنا" />
+                </div>
+
+                <!-- Company Representative -->
+                <div class="input-group">
+                    <label for="company-manager" class="w-100 mb-1">اسم مسؤول الشركة</label>
+                    <input id="company-manager" type="text" class="form-control" placeholder="اكتب اسم المسؤول هنا" />
+                </div>
+
+                <!-- Company Email -->
+                <div class="input-group">
+                    <label for="company-email" class="w-100 mb-1">البريد الإلكتروني لمسؤول الشركة</label>
+                    <input id="company-email" type="email" class="form-control"
+                        placeholder="اكتب بريدك الإلكتروني هنا" />
+                </div>
+
+                <!-- Phone -->
+                <div class="input-group">
+                    <label for="phone" class="w-100 mb-1">رقم الهاتف لمسؤول الشركة</label>
+                    <div class="phone-input-wrapper">
+                        <span class="input-group-text phone-flag" id="phone-flag">
+                            <img src="https://flagcdn.com/w40/sa.png" alt="SA" class="flag-icon" />
+                            <span class="country-code">+966</span>
+                        </span>
+                        <input id="phone" type="text" class="form-control phone-with-flag" placeholder="000 000 000" />
+                    </div>
+                </div>
+
+                <!-- Employee Count -->
+                <div class="input-group">
+                    <label for="employee-count" class="w-100 mb-1">عدد موظفي الشركة</label>
+                    <input id="employee-count" type="number" class="form-control" placeholder="اكتب عدد الموظفين هنا" />
+                </div>
+
+                <!-- Region Dropdown -->
+                <div class="dropdown-center">
+                    <label for="region" class="mb-1">أختر المنطقة</label>
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        أختر المنطقة التابعة لها
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">الرياض</a></li>
+                        <li><a class="dropdown-item" href="#">مكة المكرمة</a></li>
+                        <li><a class="dropdown-item" href="#">المنطقة الشرقية</a></li>
+                        <li><a class="dropdown-item" href="#">عسير</a></li>
+                    </ul>
+                </div>
+
+                <!-- Interested Courses -->
+                <div class="dropdown-center">
+                    <label for="courses" class="mb-1">أختر الدورات المهتم بها</label>
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        أختر الدورات التدريبية المهتم بها
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">إدارة الأعمال</a></li>
+                        <li><a class="dropdown-item" href="#">التحول الرقمي</a></li>
+                        <li><a class="dropdown-item" href="#">البرمجة والتقنية</a></li>
+                        <li><a class="dropdown-item" href="#">المهارات العامة</a></li>
+                    </ul>
+                </div>
+
+                <!-- Message Box -->
+                <div class="input-group input-group-full">
+                    <label for="message" class="w-100 mb-1">الرسالة</label>
+                    <textarea id="message" class="form-control" placeholder="اكتب ملاحظاتك هنا"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button class="main-btn mt-3">أرسل الطلب</button>
+
+                <!-- Terms Checkbox -->
+                <div class="form-check">
+                    <input class="form-check-input custom-check" type="checkbox" value="" id="checkDefault" />
+                    <label class="form-check-label" for="checkDefault">
+                        أنا أوافق على الشروط والأحكام، وسياسة الدعم الفني
+                    </label>
+                </div>
+            </form>
+
+        </section>
+        <!-- End Of The Order Form Section -->
+
+    </main>
+
+    <!-- Start Of Footer -->
+    <div id="footer"></div>
+    <!-- End Of Footer -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+
+    <!-- Load Header & Footer -->
+    <script>
+        $(function () {
+            $("#header").load("partials/header.html");
+            $("#footer").load("partials/footer.html");
+        });
+    </script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

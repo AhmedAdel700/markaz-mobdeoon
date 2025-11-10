@@ -167,39 +167,54 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function setActiveNavLinks() {
-        const headerRoot = document.getElementById("header");
-        if (!headerRoot) return false;
-
+        const headerRoot = document.getElementById("header") || document.body;
         const links = headerRoot.querySelectorAll("nav a, .offcanvas-nav a");
         if (!links.length) return false;
 
         const currentBase = toBaseName(window.location.pathname);
         let matched = false;
+
+        // First remove all active classes
         links.forEach((a) => {
             a.classList.remove("active");
+            const parentLi = a.closest("li");
+            if (parentLi) parentLi.classList.remove("active");
         });
+
         links.forEach((a) => {
             if (urlsMatch(a, currentBase)) {
                 a.classList.add("active");
                 const li = a.closest("li");
                 if (li) li.classList.add("active");
+
+                // 🔹 Mark parent dropdown toggle as active if inside a dropdown
+                const dropdownParent = a.closest(".dropdown");
+                if (dropdownParent) {
+                    const toggle = dropdownParent.querySelector(".dropdown-toggle");
+                    if (toggle) toggle.classList.add("active");
+                    dropdownParent.classList.add("active");
+                }
+
                 matched = true;
             }
         });
 
-        // Fallback: if nothing matched, mark Home on root-like paths
+        // Fallback: mark Home if nothing matched
         if (!matched && (currentBase === "" || currentBase === "index")) {
-            const home = Array.from(links).find((a) => (a.getAttribute("href") || "").trim() === "index.html" || (a.getAttribute("href") || "").trim() === "/");
+            const home = Array.from(links).find(
+                (a) => (a.getAttribute("href") || "").trim() === "index.html" ||
+                    (a.getAttribute("href") || "").trim() === "/"
+            );
             if (home) {
                 home.classList.add("active");
                 const li = home.closest("li");
                 if (li) li.classList.add("active");
             }
-            matched = !!home;
         }
 
         return matched;
     }
+
 
     // Try immediately (in case header is already in DOM)
     if (setActiveNavLinks()) return;

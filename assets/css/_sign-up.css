@@ -284,40 +284,7 @@ html[dir="rtl"] .phone-input-wrapper input.phone-with-flag {
   text-align: right;
 }
 
-/* -------------------------------
-   Checkbox Styles
---------------------------------*/
-.check-box {
-  display: flex;
-  align-items: center !important;
-  flex-direction: row !important;
-}
 
-.custom-check {
-  border: 2px solid var(--main-black);
-  border-radius: 4px;
-  box-shadow: none;
-  width: 18px;
-  height: 18px;
-}
-
-.custom-check:focus {
-  box-shadow: none;
-}
-
-.custom-check:checked {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
-  outline-color: var(--primary-color);
-}
-
-.check-box label {
-  color: var(--main-black);
-  line-height: 1.8;
-  font-weight: 500;
-  font-size: 14px;
-  margin-top: 0.25rem;
-}
 
 html[dir="rtl"] .check-box {
   flex-direction: row-reverse;

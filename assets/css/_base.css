@@ -1,4 +1,4 @@
-/* -------------------------------------------------- */
+--------------------------------------------------
 /* 🟢 GLOBAL RESETS & BASE STYLES */
 /* -------------------------------------------------- */
 * {
@@ -70,13 +70,14 @@ select,
 .form-select {
   height: 48px;
   border: 1px solid #ebedef;
-  border-radius: 6px;
+  border-radius: 6px !important;
   color: var(--main-gray);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.8;
   background-color: var(--main-white);
-  transition: box-shadow var(--main-transition), border-color var(--main-transition);
+  transition: box-shadow var(--main-transition),
+    border-color var(--main-transition);
   padding-inline-start: 12px;
   padding-inline-end: 12px;
 }
@@ -93,4 +94,164 @@ select:focus,
   border-color: var(--primary-color);
   box-shadow: 0 0 0 0.25rem rgba(4, 85, 49, 0.15);
   outline: none;
+}
+
+/* -------------------------------
+   Checkbox Styles
+--------------------------------*/
+.check-box {
+  display: flex;
+  align-items: center !important;
+  flex-direction: row !important;
+}
+
+.custom-check {
+  border: 2px solid var(--main-black);
+  border-radius: 4px;
+  box-shadow: none;
+  width: 18px;
+  height: 18px;
+}
+
+.custom-check:focus {
+  box-shadow: none;
+}
+
+.custom-check:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  outline-color: var(--primary-color);
+}
+
+.check-box label {
+  color: var(--main-black);
+  line-height: 1.8;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 0.25rem;
+}
+
+/* -------------------------------------------------- */
+/* 🟢 ACCORDION */
+/* -------------------------------------------------- */
+
+.accordion-body ul {
+  padding: 0;
+}
+
+/* -------------------------------------------------- */
+/* 🟢 DROPDOWN MENU */
+/* -------------------------------------------------- */
+
+.dropdown {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Dropdown button styled like nav links */
+.dropdown-toggle {
+  background-color: transparent !important;
+  color: var(--main-gray) !important;
+  font-weight: 500;
+  font-size: 16px;
+  border: none !important;
+  padding: 10px 16px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: color var(--main-transition) ease;
+}
+
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+  color: var(--primary-color) !important;
+  box-shadow: none;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  border: none;
+  border-radius: 0 0 8px 8px;
+  padding: 8px 0;
+  margin-top: 0;
+  min-width: fit-content;
+  max-height: none !important;
+  height: auto !important;
+  overflow: visible !important;
+  background-color: var(--main-white);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  text-align: right;
+}
+
+.dropdown-item {
+  color: var(--main-gray);
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: background-color var(--main-transition) ease,
+    color var(--main-transition) ease;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: rgba(4, 85, 49, 0.08);
+  color: var(--primary-color);
+}
+
+/* Dropdown arrow */
+.dropdown-toggle {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  margin-inline-start: 6px;
+  vertical-align: middle;
+  border-top-color: var(--main-gray) !important;
+}
+
+.dropdown-toggle:hover::after {
+  border-top-color: var(--primary-color) !important;
+}
+
+/* Parent dropdown active styling */
+.dropdown-toggle.active {
+  color: var(--primary-color) !important;
+  font-weight: bold;
+}
+
+.dropdown a.dropdown-toggle {
+  color: var(--main-black) !important;
+}
+
+.dropdown .dropdown-toggle.active {
+  color: var(--primary-color) !important;
+  font-weight: 700;
+}
+
+.dropdown-menu {
+  padding: 0 !important;
+  padding-bottom: 5px !important;
+}
+
+.dropdown-menu li {
+  padding: 0 !important;
+}
+
+.dropdown-menu a {
+  padding: 1rem !important;
+}
+
+.dropdown-item.active {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+.dropdown-menu {
+  text-align: start !important;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb > * {
+    font-size: 12px !important;
+  }
 }

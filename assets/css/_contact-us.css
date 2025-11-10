@@ -1,0 +1,279 @@
+/* =========================================================
+   ABOUT.CSS
+   INDEX:
+   1. About Section
+   2. About Boxes Section
+   3. Map Section
+   4. Media Queries
+      4.1 Max-width: 1279px
+      4.2 Max-width: 1200px
+      4.3 Max-width: 992px
+      4.4 Max-width: 820px
+      4.5 Max-width: 768px
+      4.6 Max-width: 480px
+========================================================= */
+
+/* ==================== 1. About Section ==================== */
+.contact-us {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.contact-us .contact-us-bg {
+  width: 100%;
+  min-height: 70vh;
+  background-image: url(/assets/images/about-bg.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.contact-us .contact-us-bg img {
+  position: absolute;
+  left: 0;
+  top: 65%;
+  transform: translateY(-50%);
+  min-width: 70%;
+  max-width: 900px;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.contact-us .breadcrumb {
+  background-color: transparent !important;
+  margin-top: -160px;
+  text-align: right;
+}
+
+.contact-us h1 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--primary-color);
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ==================== 2. About Boxes Section ==================== */
+.contact-us .contact-us-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  justify-items: stretch;
+  margin-top: -100px;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 10;
+}
+
+.contact-us .contact-us-boxes .box {
+  background-color: #f7f7f8;
+  border: var(--border-2);
+  border-radius: var(--border-r-8);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 22px;
+  width: 100%;
+  min-height: 200px;
+  padding: 32px 24px;
+  transition: transform var(--main-transition) ease-in-out;
+}
+
+.contact-us .contact-us-boxes .box:hover {
+  transform: translateY(-6px);
+}
+
+.contact-us .contact-us-boxes .box i {
+  font-size: 40px;
+  color: var(--primary-color);
+}
+
+.contact-us .contact-us-boxes .box h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--main-black);
+}
+
+.contact-us .contact-us-boxes .box p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--main-gray);
+}
+
+/* ==================== 3. Map Section ==================== */
+
+.map .blog-form h2 {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.6;
+}
+
+.map {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.map aside {
+  flex: 1 1 50%;
+  min-width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+
+.map .map-container {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+}
+
+/* ==================== 4. Media Queries ==================== */
+
+/* ----- 4.1 Max-width: 1200px ----- */
+@media (max-width: 1200px) {
+  .contact-us .contact-us-title h1 {
+    font-size: 48px;
+    width: 90%;
+  }
+
+  .contact-us .contact-us-boxes {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: -100px;
+  }
+
+  .contact-us .contact-us-boxes .box:last-child {
+    grid-column: span 2;
+  }
+
+  .contact-us .breadcrumb {
+    margin-top: 0px;
+  }
+}
+
+/* ----- 4.2 Max-width: 1024px ----- */
+@media (max-width: 1024px) {
+  /* Stack form and map vertically */
+  .map aside {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+
+  /* Ensure the form aside takes full width */
+  .map aside:first-child {
+    width: 100%;
+  }
+
+  /* Map container full width with proper height */
+  .map .map-container {
+    width: 100%;
+    min-height: 500px;
+  }
+}
+
+/* ----- 4.3 Max-width: 992px ----- */
+@media (max-width: 992px) {
+  .contact-us .contact-us-bg {
+    min-height: 60vh;
+  }
+
+  .contact-us .contact-us-title h1 {
+    font-size: 42px;
+    line-height: 1.6;
+  }
+
+  .contact-us .contact-us-boxes {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    width: 100%;
+    margin-top: -50px;
+  }
+
+  .contact-us .contact-us-boxes .box:last-child {
+    grid-column: span 1;
+  }
+
+  .contact-us .breadcrumb {
+    margin-top: 20px;
+  }
+
+  .map aside {
+    flex: 1 1 100%;
+  }
+
+  .map .map-container {
+    min-height: 500px;
+  }
+}
+
+/* ----- 4.4 Max-width: 820px ----- */
+@media (max-width: 820px) {
+  .contact-us .contact-us-boxes {
+    margin-top: -120px;
+  }
+}
+
+/* ----- 4.6 Max-width: 768px ----- */
+@media (max-width: 768px) {
+  .contact-us .contact-us-bg {
+    min-height: 50vh;
+    padding: 40px 0;
+  }
+
+  .contact-us .contact-us-title h1 {
+    font-size: 34px;
+    width: 95%;
+  }
+
+  .contact-us .contact-us-boxes {
+    margin-top: -120px;
+  }
+
+  .contact-us .contact-us-boxes .box {
+    width: 100%;
+    max-width: none;
+    border-radius: var(--border-r-8);
+  }
+
+  .contact-us .breadcrumb {
+    margin-top: -50px;
+  }
+}
+
+/* ----- 4.5 Max-width: 480px ----- */
+@media (max-width: 480px) {
+  .contact-us .breadcrumb {
+    margin-top: 40px;
+  }
+
+  .contact-us .contact-us-title h1 {
+    font-size: 34px;
+    line-height: 1.8;
+  }
+
+  .contact-us .contact-us-boxes {
+    margin-top: 50px;
+  }
+
+  .contact-us .contact-us-boxes .box {
+    width: 100%;
+    padding: 20px;
+  }
+}

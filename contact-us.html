@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>King Khalid University</title>
+
+    <!-- CSS Files And CDNs-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css"
+        crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+        integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <!-- Start Of Header -->
+    <div id="header"></div>
+    <!-- End Of Header -->
+
+    <main>
+        <!-- Start Of Contact Section -->
+        <section class="contact-us">
+            <div class="contact-us-bg">
+
+                <img src="/assets/images/Group.svg" alt="Logo">
+
+                <div class="container">
+                    <nav aria-label="breadcrumb about-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">تواصل معنا</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <h1>تواصل معنا</h1>
+            </div>
+
+            </div>
+
+            <div class="contact-us-boxes container">
+                <div class="box">
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <h4>البريد الإلكتروني</h4>
+                    <p>kkux@kku.edu.sa</p>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <h4>الموقع</h4>
+                    <p>الرياض - المملكة العربية السعودية 7795 شارع الملك عبد العزيز - حي الياسمين - الرياض</p>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-phone"></i>
+
+                    <h4>تواصل مع الإدارة</h4>
+                    <p>7614 241 017</p>
+                </div>
+            </div>
+        </section>
+        <!-- End Of Contact Section -->
+
+        <!-- Start Of Map Section -->
+        <section class="map container">
+
+            <!-- Form Aside -->
+            <aside class="blog-form">
+                <h2>لديك أى سؤال ؟</h2>
+                <form action="#">
+                    <!-- Username -->
+                    <div class="input-group">
+                        <label for="user-name" class="w-100 mb-1">اسم المستخدم</label>
+                        <div class="position-relative w-100">
+                            <i class="fa-solid fa-user input-icon-start"></i>
+                            <input id="user-name" type="text" class="form-control" placeholder="Username" />
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="input-group">
+                        <label for="email" class="w-100 mb-1">البريد الإلكتروني</label>
+                        <div class="position-relative w-100">
+                            <i class="fa-solid fa-envelope input-icon-start"></i>
+                            <input id="email" type="email" class="form-control" placeholder="Email@Example.Com" />
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="input-group">
+                        <label for="phone" class="w-100 mb-1">رقم الجوال</label>
+                        <div class="position-relative w-100">
+                            <div class="phone-input-wrapper">
+                                <span class="input-group-text phone-flag" id="phone-flag">
+                                    <img src="https://flagcdn.com/w40/sa.png" alt="SA" class="flag-icon" />
+                                    <span class="country-code">+966</span>
+                                </span>
+                                <input id="phone" type="text" class="form-control phone-with-flag"
+                                    placeholder="000 000 000" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="input-group mb-3 flex-column align-items-start">
+                        <label for="message" class="mb-1">أكتب رسالتك</label>
+                        <div class="position-relative w-100">
+                            <textarea id="message" class="form-control" placeholder="أكتب رسالتك"></textarea>
+                        </div>
+                    </div>
+
+                    <button class="main-btn">أرسال</button>
+                </form>
+            </aside>
+
+            <!-- Map Aside -->
+            <aside>
+                <div id="map" class="map-container"></div>
+            </aside>
+
+        </section>
+        <!-- End Of Map Section -->
+
+    </main>
+
+    <!-- Start Of Footer -->
+    <div id="footer"></div>
+    <!-- End Of Footer -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+
+    <!-- Load Header & Footer -->
+    <script>
+        $(function () {
+            $("#header").load("partials/header.html");
+            $("#footer").load("partials/footer.html");
+        });
+    </script>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script>
+        // Initialize the map
+        const map = L.map('map').setView([24.7136, 46.6753], 14); // Riyadh, Saudi Arabia
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Add a marker
+        L.marker([24.7136, 46.6753]).addTo(map)
+            .bindPopup('Riyadh')
+            .openPopup();
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+        integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

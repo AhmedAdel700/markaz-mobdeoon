@@ -111,6 +111,10 @@ form .dropdown-center .dropdown-menu {
 
 .upload-area i {
   color: var(--primary-color);
+  border: var(--border-3);
+  border-radius: var(--border-r-8);
+  padding: 15px 10px;
+  font-size: 40px;
 }
 
 .upload-text a.upload-link {
@@ -128,10 +132,248 @@ form .dropdown-center .dropdown-menu {
   color: var(--main-gray);
 }
 
-html[dir="rtl"] #birthdate {
-  text-align: end !important;
+.date-input-wrapper {
+  position: relative;
+  width: 100%;
 }
 
+.date-input-wrapper .form-control {
+  width: 100%;
+  cursor: pointer;
+  transition: all var(--main-transition) ease;
+}
+
+.date-input-wrapper .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(4, 85, 49, 0.15);
+  outline: none;
+}
+
+/* Calendar icon positioning for RTL/LTR */
+html[dir="rtl"] .calendar-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--main-gray);
+  pointer-events: none;
+}
+
+html[dir="ltr"] .calendar-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--main-gray);
+  pointer-events: none;
+}
+
+/* Input padding for calendar icon */
+.date-input-wrapper .form-control {
+  padding-inline-start: 15px;
+}
+
+.datepicker {
+  position: absolute;
+  top: calc(100% + 8px);
+  width: 100%;
+  background: var(--main-white);
+  border: 1px solid #ebedef;
+  border-radius: 6px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  z-index: 1000;
+  display: none;
+  animation: slideDown var(--main-transition) ease;
+}
+
+/* RTL/LTR positioning for datepicker */
+html[dir="rtl"] .datepicker {
+  right: 0;
+  left: auto;
+}
+
+html[dir="ltr"] .datepicker {
+  left: 0;
+  right: auto;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.datepicker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ebedef;
+}
+
+.datepicker-nav {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: all var(--main-transition) ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.datepicker-nav:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.datepicker-nav:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem rgba(4, 85, 49, 0.15);
+}
+
+html[dir="ltr"] .datepicker-nav {
+  transform: scale(-1);
+}
+
+.datepicker-title {
+  font-weight: 700;
+  color: var(--main-black);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.datepicker-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.datepicker-weekday {
+  text-align: center;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 0;
+}
+
+.datepicker-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.datepicker-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all var(--main-transition) ease;
+  color: var(--main-black);
+  background: var(--main-white);
+  border: 1px solid transparent;
+}
+
+.datepicker-day:hover:not(.disabled):not(.other-month) {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.datepicker-day.selected {
+  background: var(--primary-color);
+  color: var(--main-white);
+  font-weight: 700;
+  border-color: var(--primary-color);
+}
+
+.datepicker-day.today {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.datepicker-day.today.selected {
+  background: var(--primary-color);
+  color: var(--main-white);
+  border-color: var(--primary-color);
+}
+
+.datepicker-day.disabled {
+  color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.datepicker-day.other-month {
+  color: #ccc;
+  opacity: 0.5;
+}
+
+.datepicker-footer {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #ebedef;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.datepicker-btn {
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all var(--main-transition) ease;
+  flex: 1;
+  line-height: 1.6;
+}
+
+.datepicker-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem rgba(4, 85, 49, 0.15);
+}
+
+.datepicker-btn.today-btn {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.datepicker-btn.today-btn:hover {
+  background: var(--primary-color);
+  color: var(--main-white);
+  border-color: var(--primary-color);
+}
+
+.datepicker-btn.clear-btn {
+  background: var(--main-white);
+  color: var(--main-gray);
+  border-color: #ebedef;
+}
+
+.datepicker-btn.clear-btn:hover {
+  background: #f5f5f5;
+  color: var(--main-black);
+  border-color: #ccc;
+}
 
 /* ==============================
    Order Form Section
@@ -238,5 +480,9 @@ textarea.form-control {
   .order-from {
     padding: 1rem;
     margin: 24px auto;
+  }
+
+  .upload-area {
+    padding: 24px;
   }
 }

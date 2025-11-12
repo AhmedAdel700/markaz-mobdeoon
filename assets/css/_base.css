@@ -126,7 +126,7 @@ select:focus,
 }
 
 .custom-check {
-  border: 2px solid var(--main-black);
+  border: 1px solid var(--primary-color-40);
   border-radius: 4px;
   box-shadow: none;
   width: 18px;
@@ -150,6 +150,7 @@ select:focus,
   font-size: 14px;
   margin-top: 0.25rem;
 }
+
 
 /* -------------------------------------------------- */
 /* 🟢 ACCORDION */

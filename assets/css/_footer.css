@@ -4,7 +4,14 @@
 /* Footer styles will be added here when needed */
 
 .footer {
-  background: linear-gradient(135deg, #0d5c3a 0%, #0a4a2e 100%);
+  /* background: linear-gradient(135deg, #0d5c3a 0%, #0a4a2e 100%); */
+  background: radial-gradient(
+    ellipse 200% 100% at bottom left,
+    var(--primary-color) 0%,
+    #7fa24b 30%,
+    #54782b 60%,
+    #2d3a14 100%
+  );
   color: var(--main-white);
   padding: 60px 40px 30px;
 }
@@ -78,14 +85,15 @@
 }
 
 .footer-logo {
-  width: 186px;
-  height: 74px;
-  margin-bottom: 25px;
+  width: 240px;
+  height: auto;
+  margin-bottom: 15px;
 }
 
-.logo img {
+.footer-logo img {
   width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
 .logo-text {
@@ -140,6 +148,11 @@
   margin: 0;
   font-family: "Cairo", sans-serif;
   font-weight: 400;
+}
+
+.footer-bottom a {
+  color: #1b1a1a;
+  font-weight: 700;
 }
 
 @media (max-width: 1024px) {

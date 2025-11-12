@@ -22,8 +22,27 @@
 .hero {
   position: relative;
   width: 100%;
-  height: calc(100vh + 90px);
+  height: 100svh;
   overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    #d0e291 35%,
+    #e9f4d0 65%,
+    #fcfdf7 85%,
+    #ffffff 100%
+  );
+}
+
+html[dir="ltr"] .hero {
+  background: linear-gradient(
+    225deg,
+    var(--primary-color) 0%,
+    #d0e291 35%,
+    #e9f4d0 65%,
+    #fcfdf7 85%,
+    #ffffff 100%
+  );
 }
 
 .frame1 {
@@ -42,7 +61,7 @@ html[dir="ltr"] .frame1 {
 
 .hero-img {
   position: absolute;
-  bottom: 8.6%;
+  bottom: 0%;
   inset-inline-end: 0;
 }
 
@@ -62,7 +81,7 @@ html[dir="ltr"] .hero-img {
 }
 
 .hero .hero-text {
-  font-size: 60px;
+  font-size: 59px;
   font-weight: 400;
   margin: 0;
 }
@@ -704,7 +723,7 @@ html[dir="ltr"] .email-box::before {
   .hero {
     height: fit-content;
     min-height: fit-content;
-    padding: 50px 24px;
+    padding: 50px 24px 0px 24px;
     text-align: center;
     position: relative;
   }
@@ -743,6 +762,9 @@ html[dir="ltr"] .email-box::before {
 
 /* <=1024px */
 @media (max-width: 1024px) {
+  .hero {
+    margin-bottom: 35px;
+  }
   /* Training */
   .training-section {
     margin-top: 0px;

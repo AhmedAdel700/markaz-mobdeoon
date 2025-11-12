@@ -22,7 +22,7 @@
 .contact-us .contact-us-bg {
   width: 100%;
   min-height: 70vh;
-  background-image: url(/assets/images/about-bg.svg);
+  /* background-image: url(/assets/images/about-bg.svg); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -33,6 +33,26 @@
   text-align: center;
   padding: 60px 0;
   overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    #d0e291 35%,
+    #e9f4d0 65%,
+    #fcfdf7 85%,
+    #ffffff 100%
+  );
+}
+
+html[dir="ltr"] .contact-us-bg {
+  background: linear-gradient(
+    225deg,
+    var(--primary-color) 0%,
+    #d0e291 35%,
+    #e9f4d0 65%,
+    #fcfdf7 85%,
+    #ffffff 100%
+  );
 }
 
 .contact-us .contact-us-bg img {
@@ -53,7 +73,7 @@
 }
 
 .contact-us h1 {
-  font-size: 40px;
+  font-size: 60px;
   font-weight: 700;
   line-height: 1.6;
   color: var(--primary-color);

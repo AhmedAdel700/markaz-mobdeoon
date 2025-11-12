@@ -23,7 +23,7 @@
 .about .about-bg {
   width: 100%;
   min-height: 70vh;
-  background-image: url(/assets/images/about-bg.svg);
+  /* background-image: url(/assets/images/about-bg.svg); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -34,6 +34,26 @@
   text-align: center;
   padding: 60px 0;
   overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    #d0e291 35%,
+    #e9f4d0 65%,
+    #fcfdf7 85%,
+    #ffffff 100%
+  );
+}
+
+html[dir="ltr"] .about-bg {
+  background: linear-gradient(
+    225deg,
+    var(--primary-color) 0%,
+    #d0e291 35%,
+    #e9f4d0 65%,
+    #fcfdf7 85%,
+    #ffffff 100%
+  );
 }
 
 .about .about-bg img {

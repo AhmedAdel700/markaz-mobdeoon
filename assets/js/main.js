@@ -234,7 +234,7 @@ document.addEventListener("DOMContentLoaded", function () {
 $(document).ready(function () {
     // Get direction from HTML element
     const isRTL = $('html').attr('dir') === 'rtl';
-    
+
     // Month names for Arabic and English
     const monthNamesAr = [
         'يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو',
@@ -245,21 +245,21 @@ $(document).ready(function () {
         'July', 'August', 'September', 'October', 'November', 'December'
     ];
     const monthNames = isRTL ? monthNamesAr : monthNamesEn;
-    
+
     // Weekday labels for Arabic and English
     // Arabic: Saturday=ح, Sunday=ن, Monday=ث, Tuesday=ر, Wednesday=خ, Thursday=ج, Friday=س
     // English: Sunday=Su, Monday=Mo, Tuesday=Tu, Wednesday=We, Thursday=Th, Friday=Fr, Saturday=Sa
     const weekDaysAr = ['ح', 'ن', 'ث', 'ر', 'خ', 'ج', 'س'];
     const weekDaysEn = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
     const weekDays = isRTL ? weekDaysAr : weekDaysEn;
-    
+
     // Placeholder text
     const placeholderText = isRTL ? 'اكتب الاسم الأول هنا' : 'Enter birth date';
-    
+
     // Today and Clear button text
     const todayText = isRTL ? 'اليوم' : 'Today';
     const clearText = isRTL ? 'مسح' : 'Clear';
-    
+
     let currentDate = new Date();
     let selectedDate = null;
 
@@ -299,7 +299,7 @@ $(document).ready(function () {
             // Convert to Arabic week: Saturday=0, Sunday=1, ..., Friday=6
             firstDayOfWeek = (firstDayOfWeek + 1) % 7;
         }
-        
+
         const lastDateOfMonth = lastDay.getDate();
         const prevLastDate = prevLastDay.getDate();
 
@@ -332,7 +332,7 @@ $(document).ready(function () {
         }
 
         $('.datepicker-days').html(daysHtml);
-        
+
         // Update button texts
         $('.today-btn').text(todayText);
         $('.clear-btn').text(clearText);
@@ -409,3 +409,30 @@ $(document).ready(function () {
     // Initialize
     renderCalendar(currentDate);
 });
+
+// OTP Inputs
+const otpInputs = document.querySelectorAll('.otp-input');
+
+otpInputs.forEach((input, index) => {
+    // Only allow numbers and move to next input
+    input.addEventListener('input', (e) => {
+        // Remove non-numeric characters
+        e.target.value = e.target.value.replace(/[^0-9]/g, '');
+
+        // Auto focus next input
+        if (e.target.value && index < otpInputs.length - 1) {
+            otpInputs[index + 1].focus();
+        }
+    });
+
+    // Handle backspace to move to previous input
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Backspace' && !e.target.value && index > 0) {
+            otpInputs[index - 1].focus();
+        }
+    });
+});
+
+// Optional: focus first input on page load
+otpInputs[0].focus();
+

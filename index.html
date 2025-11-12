@@ -1,568 +1,241 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>King Khalid University</title>
 
-    <!-- CSS Files And CDNs-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      referrerpolicy="no-referrer"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مركز المبدعون</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css"
-      crossorigin="anonymous"
-    />
+  <!-- CSS Files And CDNs-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    referrerpolicy="no-referrer" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
-      integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css"
+    crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+    integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <body>
-    <!-- Start Of Header -->
-    <div id="header"></div>
-    <!-- End Of Header -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
 
-    <main>
-      <!-- Start Of Hero Section -->
-      <section class="hero">
-        <img src="assets/images/hero.svg" alt="hero image" class="hero-img" />
-        <img src="assets/images/frame1.svg" alt="hero image" class="frame1" />
+<body>
+  <!-- Start Of Header -->
+  <div id="header"></div>
+  <!-- End Of Header -->
 
-        <div class="hero-text-box">
-          <h1 class="hero-text">
-            منصة <span style="color: var(--primary-color)">KKUX</span> هي
-            المنصة<br />
-            التعليمية الرقمية<br />
-            التابعة لـ جامعة الملك خالد
-          </h1>
+  <main>
+    <!-- Start Of Hero Section -->
+    <section class="hero">
+      <img src="assets/images/hero.svg" alt="hero image" class="hero-img" />
+      <!-- <img src="assets/images/frame1.svg" alt="hero image" class="frame1" /> -->
 
-          <p>
-            طور مهاراتك بانضمامك لدوراتنا أو برامجنا واحصل على شهادة معتمدة من
-            جامعة الملك خالد
-          </p>
+      <div class="hero-text-box">
+        <h1 class="hero-text">
+          <span style="color: var(--primary-color)">مركز المبدعون</span> هي
+          المنصة<br />
+          التعليمية الرقمية<br />
+          التابعة لـ جامعة الملك عبد العزيز
+        </h1>
 
-          <button class="main-btn">
-            <i class="fa-solid fa-arrow-right arrow-dir"></i>
-            أنضم الينا
-            <i class="fa-solid fa-arrow-left arrow-dir"></i>
+        <p>
+          طور مهاراتك بانضمامك لدوراتنا أو برامجنا واحصل على شهادة معتمدة من
+          جامعة الملك عبد العزيز
+        </p>
+
+        <button class="main-btn">
+          <i class="fa-solid fa-arrow-right arrow-dir"></i>
+          أنضم الينا
+          <i class="fa-solid fa-arrow-left arrow-dir"></i>
+        </button>
+
+        <div class="search-box">
+          <div>
+            <label for="fields">المجالات</label>
+            <select id="fields" class="form-select" aria-label="Default select example">
+              <option selected disabled>اختر اسم المجال</option>
+              <option value="1">مجال 1</option>
+              <option value="2">مجال 2</option>
+              <option value="3">مجال 3</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="search-field">حدد بحثك</label>
+            <input type="text" id="search-field" class="form-control" placeholder="ماذا تريد أن تتعلم..." />
+          </div>
+
+          <button class="main-btn" style="border-radius: 8px">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            بحث
           </button>
+        </div>
+      </div>
+    </section>
+    <!-- End Of Hero Section -->
 
-          <div class="search-box">
-            <div>
-              <label for="fields">المجالات</label>
-              <select
-                id="fields"
-                class="form-select"
-                aria-label="Default select example"
-              >
-                <option selected disabled>اختر اسم المجال</option>
-                <option value="1">مجال 1</option>
-                <option value="2">مجال 2</option>
-                <option value="3">مجال 3</option>
-              </select>
-            </div>
+    <!-- Start Of Training Section -->
+    <section class="training-section container">
+      <div class="section-header">
+        <div>
+          <h2>المجالات التدريبية</h2>
+          <p>
+            نواصل تحقيق النجاحات والإنجازات بثبات، ملتزمين بتقديم أعلى معايير
+            الجودة والتميز في خدماتنا.
+          </p>
+        </div>
+        <a href="training-details.html" class="view-all-btn">
+          عرض الكل
+          <i class="fa-solid fa-arrow-left arrow-dir"></i>
+        </a>
+      </div>
 
-            <div>
-              <label for="search-field">حدد بحثك</label>
-              <input
-                type="text"
-                id="search-field"
-                class="form-control"
-                placeholder="ماذا تريد أن تتعلم..."
-              />
-            </div>
+      <hr class="h-line" />
 
-            <button class="main-btn" style="border-radius: 8px">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              بحث
-            </button>
+      <!-- Swiper -->
+      <div class="swiper training-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide training-card">
+            <img src="assets/images/head-icon.svg" alt="Head Icon" />
+            <p>دبلوم اقتصاديات سوق العمل</p>
+          </div>
+
+          <div class="swiper-slide training-card">
+            <img src="assets/images/head-icon.svg" alt="Head Icon" />
+            <p>دبلوم اقتصاديات سوق العمل</p>
+          </div>
+
+          <div class="swiper-slide training-card">
+            <img src="assets/images/head-icon.svg" alt="Head Icon" />
+            <p>دبلوم اقتصاديات سوق العمل</p>
+          </div>
+
+          <div class="swiper-slide training-card">
+            <img src="assets/images/head-icon.svg" alt="Head Icon" />
+            <p>دبلوم اقتصاديات سوق العمل</p>
+          </div>
+
+          <div class="swiper-slide training-card">
+            <img src="assets/images/head-icon.svg" alt="Head Icon" />
+            <p>دبلوم اقتصاديات سوق العمل</p>
           </div>
         </div>
-      </section>
-      <!-- End Of Hero Section -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- End Of Training Section -->
 
-      <!-- Start Of Training Section -->
-      <section class="training-section container">
-        <div class="section-header">
-          <div>
-            <h2>المجالات التدريبية</h2>
-            <p>
-              نواصل تحقيق النجاحات والإنجازات بثبات، ملتزمين بتقديم أعلى معايير
-              الجودة والتميز في خدماتنا.
-            </p>
-          </div>
-          <a href="training-details.html" class="view-all-btn">
-            عرض الكل
-            <i class="fa-solid fa-arrow-left arrow-dir"></i>
-          </a>
+    <!-- Start Of Learning Trips Section -->
+    <section id="learning-trips" class="container">
+      <div class="section-header-2">
+        <div>
+          <h2>رحلة تعليمية مميّزة</h2>
+          <p>
+            اختر من بين مجموعتنا الواسعة من الدورات والدبلومات والشهادات
+            المصممة بخبرة لتطوير مسيرتك المهنية
+          </p>
         </div>
+        <div class="tabs-box">
+          <div class="tabs-header">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                  type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                  الدورات
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                  type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                  الدبلومات
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                  type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
+                  الزمالات
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled"
+                  type="button" role="tab" aria-controls="pills-disabled" aria-selected="false">
+                  الشهادات
+                </button>
+              </li>
+            </ul>
 
-        <hr class="h-line" />
-
-        <!-- Swiper -->
-        <div class="swiper training-swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide training-card">
-              <img src="assets/images/head-icon.svg" alt="Head Icon" />
-              <p>دبلوم اقتصاديات سوق العمل</p>
-            </div>
-
-            <div class="swiper-slide training-card">
-              <img src="assets/images/head-icon.svg" alt="Head Icon" />
-              <p>دبلوم اقتصاديات سوق العمل</p>
-            </div>
-
-            <div class="swiper-slide training-card">
-              <img src="assets/images/head-icon.svg" alt="Head Icon" />
-              <p>دبلوم اقتصاديات سوق العمل</p>
-            </div>
-
-            <div class="swiper-slide training-card">
-              <img src="assets/images/head-icon.svg" alt="Head Icon" />
-              <p>دبلوم اقتصاديات سوق العمل</p>
-            </div>
-
-            <div class="swiper-slide training-card">
-              <img src="assets/images/head-icon.svg" alt="Head Icon" />
-              <p>دبلوم اقتصاديات سوق العمل</p>
-            </div>
+            <a href="#" class="view-all-btn">
+              عرض الكل
+              <i class="fa-solid fa-arrow-left arrow-dir"></i>
+            </a>
           </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </section>
-      <!-- End Of Training Section -->
+          <hr class="h-line mt-3" />
 
-      <!-- Start Of Learning Trips Section -->
-      <section id="learning-trips" class="container">
-        <div class="section-header-2">
-          <div>
-            <h2>رحلة تعليمية مميّزة</h2>
-            <p>
-              اختر من بين مجموعتنا الواسعة من الدورات والدبلومات والشهادات
-              المصممة بخبرة لتطوير مسيرتك المهنية
-            </p>
-          </div>
-          <div class="tabs-box">
-            <div class="tabs-header">
-              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                <li class="nav-item" role="presentation">
-                  <button
-                    class="nav-link active"
-                    id="pills-home-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#pills-home"
-                    type="button"
-                    role="tab"
-                    aria-controls="pills-home"
-                    aria-selected="true"
-                  >
-                    الدورات
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button
-                    class="nav-link"
-                    id="pills-profile-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#pills-profile"
-                    type="button"
-                    role="tab"
-                    aria-controls="pills-profile"
-                    aria-selected="false"
-                  >
-                    الدبلومات
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button
-                    class="nav-link"
-                    id="pills-contact-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#pills-contact"
-                    type="button"
-                    role="tab"
-                    aria-controls="pills-contact"
-                    aria-selected="false"
-                  >
-                    الزمالات
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button
-                    class="nav-link"
-                    id="pills-disabled-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#pills-disabled"
-                    type="button"
-                    role="tab"
-                    aria-controls="pills-disabled"
-                    aria-selected="false"
-                  >
-                    الشهادات
-                  </button>
-                </li>
-              </ul>
-
-              <a href="#" class="view-all-btn">
-                عرض الكل
-                <i class="fa-solid fa-arrow-left arrow-dir"></i>
-              </a>
-            </div>
-            <hr class="h-line mt-3" />
-
-            <div class="tab-content" id="pills-tabContent">
-              <div
-                class="tab-pane fade show active"
-                id="pills-home"
-                role="tabpanel"
-                aria-labelledby="pills-home-tab"
-                tabindex="0"
-              >
-                <!-- Cards Swiper -->
-                <div class="swiper learning-trips-swiper">
-                  <div class="swiper-wrapper">
-                    <!-- Main Card Style 1 -->
-                    <div class="swiper-slide">
-                      <div class="card-style">
-                        <div class="img-container">
-                          <img
-                            src="/assets/images/card-img-1.png"
-                            alt="card-img-1"
-                          />
-                          <div class="like-icon">
-                            <i class="fa-regular fa-heart"></i>
-                          </div>
-                          <div
-                            class="cap-icon"
-                            style="
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+              tabindex="0">
+              <!-- Cards Swiper -->
+              <div class="swiper learning-trips-swiper">
+                <div class="swiper-wrapper">
+                  <!-- Main Card Style 1 -->
+                  <div class="swiper-slide">
+                    <div class="card-style">
+                      <div class="img-container">
+                        <img src="/assets/images/card-img-1.png" alt="card-img-1" />
+                        <div class="like-icon">
+                          <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="cap-icon" style="
                               background-color: #edf3f1;
                               color: #53b78b;
                               font-size: 14px;
                               padding: 10px 12px;
-                            "
-                          >
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            تعلم عن بعد
-                          </div>
-                        </div>
-
-                        <div class="card-body">
-                          <h5 class="card-title">
-                            دورة تحليل البيانات وتمثيلها
-                          </h5>
-
-                          <div class="info">
-                            <div>
-                              <i class="fa-brands fa-readme"></i>
-                              <span>10 محاضرات</span>
-                            </div>
-
-                            <div class="v-line">|</div>
-
-                            <div>
-                              <i class="fa-solid fa-clock"></i>
-                              <span>40 ساعات</span>
-                            </div>
-
-                            <div class="v-line">|</div>
-
-                            <div>
-                              <i class="fa-solid fa-calendar-days"></i>
-                              <span>10 أيام</span>
-                            </div>
-                          </div>
-
-                          <div class="price">
-                            <span class="price-label">السعر</span>
-                            <span class="price-value">20,100 ريال</span>
-                          </div>
-
-                          <div class="card-btns">
-                            <button class="main-btn">
-                              أضافة للسلة
-                              <i class="fa-solid fa-bag-shopping"></i>
-                            </button>
-                            <button class="main-btn-2">
-                              <a href="courses-details.html">
-                                التفاصيل
-                                <i class="fa-solid fa-arrow-left arrow-dir"></i>
-                              </a>
-                            </button>
-                          </div>
+                            ">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                          تعلم عن بعد
                         </div>
                       </div>
-                    </div>
-                    <!-- Main Card Style 1 -->
-                    <div class="swiper-slide">
-                      <div class="card-style">
-                        <div class="img-container">
-                          <img
-                            src="/assets/images/card-img-1.png"
-                            alt="card-img-1"
-                          />
-                          <div class="like-icon">
-                            <i class="fa-regular fa-heart"></i>
-                          </div>
-                          <div
-                            class="cap-icon"
-                            style="
-                              background-color: #edf3f1;
-                              color: #53b78b;
-                              font-size: 14px;
-                              padding: 10px 12px;
-                            "
-                          >
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            تعلم عن بعد
-                          </div>
-                        </div>
 
-                        <div class="card-body">
-                          <h5 class="card-title">
-                            دورة تحليل البيانات وتمثيلها
-                          </h5>
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          دورة تحليل البيانات وتمثيلها
+                        </h5>
 
-                          <div class="info">
-                            <div>
-                              <i class="fa-brands fa-readme"></i>
-                              <span>10 محاضرات</span>
-                            </div>
-
-                            <div class="v-line">|</div>
-
-                            <div>
-                              <i class="fa-solid fa-clock"></i>
-                              <span>40 ساعات</span>
-                            </div>
-
-                            <div class="v-line">|</div>
-
-                            <div>
-                              <i class="fa-solid fa-calendar-days"></i>
-                              <span>10 أيام</span>
-                            </div>
+                        <div class="info">
+                          <div>
+                            <i class="fa-brands fa-readme"></i>
+                            <span>10 محاضرات</span>
                           </div>
 
-                          <div class="price">
-                            <span class="price-label">السعر</span>
-                            <span class="price-value">20,100 ريال</span>
+                          <div class="v-line">|</div>
+
+                          <div>
+                            <i class="fa-solid fa-clock"></i>
+                            <span>40 ساعات</span>
                           </div>
 
-                          <div class="card-btns">
-                            <button class="main-btn">
-                              أضافة للسلة
-                              <i class="fa-solid fa-bag-shopping"></i>
-                            </button>
-                            <button class="main-btn-2">
-                              <a href="courses-details.html">
-                                التفاصيل
-                                <i class="fa-solid fa-arrow-left arrow-dir"></i>
-                              </a>
-                            </button>
+                          <div class="v-line">|</div>
+
+                          <div>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span>10 أيام</span>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <!-- Main Card Style 1 -->
-                    <div class="swiper-slide">
-                      <div class="card-style">
-                        <div class="img-container">
-                          <img
-                            src="/assets/images/card-img-1.png"
-                            alt="card-img-1"
-                          />
-                          <div class="like-icon">
-                            <i class="fa-regular fa-heart"></i>
-                          </div>
-                          <div
-                            class="cap-icon"
-                            style="
-                              background-color: #edf3f1;
-                              color: #53b78b;
-                              font-size: 14px;
-                              padding: 10px 12px;
-                            "
-                          >
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            تعلم عن بعد
-                          </div>
+
+                        <div class="price">
+                          <span class="price-label">السعر</span>
+                          <span class="price-value">20,100 ريال</span>
                         </div>
-                        <div class="card-body">
-                          <h5 class="card-title">
-                            دورة تحليل البيانات وتمثيلها
-                          </h5>
 
-                          <div class="info">
-                            <div>
-                              <i class="fa-brands fa-readme"></i>
-                              <span>10 محاضرات</span>
-                            </div>
-
-                            <div class="v-line">|</div>
-
-                            <div>
-                              <i class="fa-solid fa-clock"></i>
-                              <span>40 ساعات</span>
-                            </div>
-
-                            <div class="v-line">|</div>
-
-                            <div>
-                              <i class="fa-solid fa-calendar-days"></i>
-                              <span>10 أيام</span>
-                            </div>
-                          </div>
-
-                          <div class="price">
-                            <span class="price-label">السعر</span>
-                            <span class="price-value">20,100 ريال</span>
-                          </div>
-
-                          <div class="card-btns">
-                            <button class="main-btn">
-                              أضافة للسلة
-                              <i class="fa-solid fa-bag-shopping"></i>
-                            </button>
-                            <button class="main-btn-2">
-                              <a href="courses-details.html">
-                                التفاصيل
-                                <i class="fa-solid fa-arrow-left arrow-dir"></i>
-                              </a>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Main Card Style 1 -->
-                    <div class="swiper-slide">
-                      <div class="card-style">
-                        <div class="img-container">
-                          <img
-                            src="/assets/images/card-img-1.png"
-                            alt="card-img-1"
-                          />
-                          <div class="like-icon">
-                            <i class="fa-regular fa-heart"></i>
-                          </div>
-                          <div
-                            class="cap-icon"
-                            style="
-                              background-color: #fff7d7;
-                              color: #ea9008;
-                              font-size: 14px;
-                              padding: 10px 12px;
-                            "
-                          >
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            حضوري
-                          </div>
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">دورة اقتصاديات سوق العمل</h5>
-
-                          <div class="info">
-                            <div>
-                              <i class="fa-brands fa-readme"></i>
-                              <span>10 محاضرات</span>
-                            </div>
-
-                            <div class="v-line">|</div>
-
-                            <div>
-                              <i class="fa-solid fa-clock"></i>
-                              <span>40 ساعات</span>
-                            </div>
-
-                            <div class="v-line">|</div>
-
-                            <div>
-                              <i class="fa-solid fa-calendar-days"></i>
-                              <span>10 أيام</span>
-                            </div>
-                          </div>
-
-                          <div class="price">
-                            <span class="price-label">السعر</span>
-                            <span class="price-value">مجانى</span>
-                          </div>
-
+                        <div class="card-btns">
                           <button class="main-btn">
+                            أضافة للسلة
+                            <i class="fa-solid fa-bag-shopping"></i>
+                          </button>
+                          <button class="main-btn-2">
                             <a href="courses-details.html">
-                              <span>عرض التفاصيل</span>
-                              <i class="fa-solid fa-arrow-left arrow-dir"></i>
-                            </a>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Main Card Style 1 -->
-                    <div class="swiper-slide">
-                      <div class="card-style">
-                        <div class="img-container">
-                          <img
-                            src="/assets/images/card-img-1.png"
-                            alt="card-img-1"
-                          />
-                          <div class="like-icon">
-                            <i class="fa-regular fa-heart"></i>
-                          </div>
-                          <div
-                            class="cap-icon"
-                            style="
-                              background-color: #e2effd;
-                              color: #0871ea;
-                              font-size: 14px;
-                              padding: 10px 12px;
-                            "
-                          >
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            تعلم ذاتي
-                          </div>
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">دورة اقتصاديات سوق العمل</h5>
-
-                          <div class="info">
-                            <div>
-                              <i class="fa-brands fa-readme"></i>
-                              <span>10 محاضرات</span>
-                            </div>
-
-                            <div class="v-line">|</div>
-
-                            <div>
-                              <i class="fa-solid fa-clock"></i>
-                              <span>40 ساعات</span>
-                            </div>
-
-                            <div class="v-line">|</div>
-
-                            <div>
-                              <i class="fa-solid fa-calendar-days"></i>
-                              <span>10 أيام</span>
-                            </div>
-                          </div>
-
-                          <div class="price">
-                            <span class="price-label">السعر</span>
-                            <span class="price-value">مجانى</span>
-                          </div>
-
-                          <button class="main-btn">
-                            <a href="#">
-                              <span>عرض التفاصيل</span>
+                              التفاصيل
                               <i class="fa-solid fa-arrow-left arrow-dir"></i>
                             </a>
                           </button>
@@ -570,190 +243,64 @@
                       </div>
                     </div>
                   </div>
-                  <div class="swiper-pagination"></div>
-                </div>
-              </div>
-              <div
-                class="tab-pane fade"
-                id="pills-profile"
-                role="tabpanel"
-                aria-labelledby="pills-profile-tab"
-                tabindex="0"
-              >
-                <hr class="h-line" />
-                <!-- Cards Swiper -->
-                <div class="swiper learning-trips-swiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="card-style">
-                        <div class="img-container">
-                          <img
-                            src="/assets/images/card-img-1.png"
-                            alt="card-img-1"
-                          />
-                          <div class="like-icon">
-                            <i class="fa-regular fa-heart"></i>
-                          </div>
-                          <div
-                            class="cap-icon"
-                            style="
+                  <!-- Main Card Style 1 -->
+                  <div class="swiper-slide">
+                    <div class="card-style">
+                      <div class="img-container">
+                        <img src="/assets/images/card-img-1.png" alt="card-img-1" />
+                        <div class="like-icon">
+                          <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="cap-icon" style="
                               background-color: #edf3f1;
                               color: #53b78b;
                               font-size: 14px;
                               padding: 10px 12px;
-                            "
-                          >
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            تعلم عن بعد
-                          </div>
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">
-                            دورة تحليل البيانات وتمثيلها
-                          </h5>
-                          <div class="info">
-                            <div>
-                              <i class="fa-brands fa-readme"></i>
-                              <span>10 محاضرات</span>
-                            </div>
-                            <div class="v-line">|</div>
-                            <div>
-                              <i class="fa-solid fa-clock"></i>
-                              <span>40 ساعات</span>
-                            </div>
-                            <div class="v-line">|</div>
-                            <div>
-                              <i class="fa-solid fa-calendar-days"></i>
-                              <span>10 أيام</span>
-                            </div>
-                          </div>
-                          <div class="price">
-                            <span class="price-label">السعر</span>
-                            <span class="price-value">20,100 ريال</span>
-                          </div>
-                          <div class="card-btns">
-                            <button class="main-btn">
-                              أضافة للسلة
-                              <i class="fa-solid fa-bag-shopping"></i>
-                            </button>
-                            <button class="main-btn-2">
-                              <a href="diplomas-details.html">
-                                التفاصيل
-                                <i class="fa-solid fa-arrow-left arrow-dir"></i>
-                              </a>
-                            </button>
-                          </div>
+                            ">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                          تعلم عن بعد
                         </div>
                       </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="card-style">
-                        <div class="img-container">
-                          <img
-                            src="/assets/images/card-img-1.png"
-                            alt="card-img-1"
-                          />
-                          <div class="like-icon">
-                            <i class="fa-regular fa-heart"></i>
+
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          دورة تحليل البيانات وتمثيلها
+                        </h5>
+
+                        <div class="info">
+                          <div>
+                            <i class="fa-brands fa-readme"></i>
+                            <span>10 محاضرات</span>
                           </div>
-                          <div
-                            class="cap-icon"
-                            style="
-                              background-color: #fff7d7;
-                              color: #ea9008;
-                              font-size: 14px;
-                              padding: 10px 12px;
-                            "
-                          >
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            حضوري
+
+                          <div class="v-line">|</div>
+
+                          <div>
+                            <i class="fa-solid fa-clock"></i>
+                            <span>40 ساعات</span>
                           </div>
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">دورة اقتصاديات سوق العمل</h5>
-                          <div class="info">
-                            <div>
-                              <i class="fa-brands fa-readme"></i>
-                              <span>10 محاضرات</span>
-                            </div>
-                            <div class="v-line">|</div>
-                            <div>
-                              <i class="fa-solid fa-clock"></i>
-                              <span>40 ساعات</span>
-                            </div>
-                            <div class="v-line">|</div>
-                            <div>
-                              <i class="fa-solid fa-calendar-days"></i>
-                              <span>10 أيام</span>
-                            </div>
-                          </div>
-                          <div class="price">
-                            <span class="price-label">السعر</span>
-                            <span class="price-value">مجانى</span>
-                          </div>
-                          <div class="card-btns">
-                            <button class="main-btn">
-                              أضافة للسلة
-                              <i class="fa-solid fa-bag-shopping"></i>
-                            </button>
-                            <button class="main-btn-2">
-                              <a href="diplomas-details.html">
-                                التفاصيل
-                                <i class="fa-solid fa-arrow-left arrow-dir"></i>
-                              </a>
-                            </button>
+
+                          <div class="v-line">|</div>
+
+                          <div>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span>10 أيام</span>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="card-style">
-                        <div class="img-container">
-                          <img
-                            src="/assets/images/card-img-1.png"
-                            alt="card-img-1"
-                          />
-                          <div class="like-icon">
-                            <i class="fa-regular fa-heart"></i>
-                          </div>
-                          <div
-                            class="cap-icon"
-                            style="
-                              background-color: #e2effd;
-                              color: #0871ea;
-                              font-size: 14px;
-                              padding: 10px 12px;
-                            "
-                          >
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            تعلم ذاتي
-                          </div>
+
+                        <div class="price">
+                          <span class="price-label">السعر</span>
+                          <span class="price-value">20,100 ريال</span>
                         </div>
-                        <div class="card-body">
-                          <h5 class="card-title">دورة اقتصاديات سوق العمل</h5>
-                          <div class="info">
-                            <div>
-                              <i class="fa-brands fa-readme"></i>
-                              <span>10 محاضرات</span>
-                            </div>
-                            <div class="v-line">|</div>
-                            <div>
-                              <i class="fa-solid fa-clock"></i>
-                              <span>40 ساعات</span>
-                            </div>
-                            <div class="v-line">|</div>
-                            <div>
-                              <i class="fa-solid fa-calendar-days"></i>
-                              <span>10 أيام</span>
-                            </div>
-                          </div>
-                          <div class="price">
-                            <span class="price-label">السعر</span>
-                            <span class="price-value">مجانى</span>
-                          </div>
+
+                        <div class="card-btns">
                           <button class="main-btn">
-                            <a href="#">
-                              <span>عرض التفاصيل</span>
+                            أضافة للسلة
+                            <i class="fa-solid fa-bag-shopping"></i>
+                          </button>
+                          <button class="main-btn-2">
+                            <a href="courses-details.html">
+                              التفاصيل
                               <i class="fa-solid fa-arrow-left arrow-dir"></i>
                             </a>
                           </button>
@@ -761,292 +308,63 @@
                       </div>
                     </div>
                   </div>
-                  <div class="swiper-pagination"></div>
-                </div>
-              </div>
-              <div
-                class="tab-pane fade"
-                id="pills-contact"
-                role="tabpanel"
-                aria-labelledby="pills-contact-tab"
-                tabindex="0"
-              >
-                <hr class="h-line" />
-                <!-- Cards Swiper -->
-                <div class="swiper learning-trips-swiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="card-style">
-                        <div class="img-container">
-                          <img
-                            src="/assets/images/card-img-1.png"
-                            alt="card-img-1"
-                          />
-                          <div class="like-icon">
-                            <i class="fa-regular fa-heart"></i>
-                          </div>
-                          <div
-                            class="cap-icon"
-                            style="
+                  <!-- Main Card Style 1 -->
+                  <div class="swiper-slide">
+                    <div class="card-style">
+                      <div class="img-container">
+                        <img src="/assets/images/card-img-1.png" alt="card-img-1" />
+                        <div class="like-icon">
+                          <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="cap-icon" style="
                               background-color: #edf3f1;
                               color: #53b78b;
                               font-size: 14px;
                               padding: 10px 12px;
-                            "
-                          >
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            تعلم عن بعد
-                          </div>
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">
-                            دورة تحليل البيانات وتمثيلها
-                          </h5>
-                          <div class="info">
-                            <div>
-                              <i class="fa-brands fa-readme"></i>
-                              <span>10 محاضرات</span>
-                            </div>
-                            <div class="v-line">|</div>
-                            <div>
-                              <i class="fa-solid fa-clock"></i>
-                              <span>40 ساعات</span>
-                            </div>
-                            <div class="v-line">|</div>
-                            <div>
-                              <i class="fa-solid fa-calendar-days"></i>
-                              <span>10 أيام</span>
-                            </div>
-                          </div>
-                          <div class="price">
-                            <span class="price-label">السعر</span>
-                            <span class="price-value">20,100 ريال</span>
-                          </div>
-                          <div class="card-btns">
-                            <button class="main-btn">
-                              أضافة للسلة
-                              <i class="fa-solid fa-bag-shopping"></i>
-                            </button>
-                            <button class="main-btn-2">
-                              <a href="fellowships-details.html">
-                                التفاصيل
-                                <i class="fa-solid fa-arrow-left arrow-dir"></i>
-                              </a>
-                            </button>
-                          </div>
+                            ">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                          تعلم عن بعد
                         </div>
                       </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="card-style">
-                        <div class="img-container">
-                          <img
-                            src="/assets/images/card-img-1.png"
-                            alt="card-img-1"
-                          />
-                          <div class="like-icon">
-                            <i class="fa-regular fa-heart"></i>
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          دورة تحليل البيانات وتمثيلها
+                        </h5>
+
+                        <div class="info">
+                          <div>
+                            <i class="fa-brands fa-readme"></i>
+                            <span>10 محاضرات</span>
                           </div>
-                          <div
-                            class="cap-icon"
-                            style="
-                              background-color: #fff7d7;
-                              color: #ea9008;
-                              font-size: 14px;
-                              padding: 10px 12px;
-                            "
-                          >
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            حضوري
+
+                          <div class="v-line">|</div>
+
+                          <div>
+                            <i class="fa-solid fa-clock"></i>
+                            <span>40 ساعات</span>
+                          </div>
+
+                          <div class="v-line">|</div>
+
+                          <div>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span>10 أيام</span>
                           </div>
                         </div>
-                        <div class="card-body">
-                          <h5 class="card-title">دورة اقتصاديات سوق العمل</h5>
-                          <div class="info">
-                            <div>
-                              <i class="fa-brands fa-readme"></i>
-                              <span>10 محاضرات</span>
-                            </div>
-                            <div class="v-line">|</div>
-                            <div>
-                              <i class="fa-solid fa-clock"></i>
-                              <span>40 ساعات</span>
-                            </div>
-                            <div class="v-line">|</div>
-                            <div>
-                              <i class="fa-solid fa-calendar-days"></i>
-                              <span>10 أيام</span>
-                            </div>
-                          </div>
-                          <div class="price">
-                            <span class="price-label">السعر</span>
-                            <span class="price-value">مجانى</span>
-                          </div>
+
+                        <div class="price">
+                          <span class="price-label">السعر</span>
+                          <span class="price-value">20,100 ريال</span>
+                        </div>
+
+                        <div class="card-btns">
                           <button class="main-btn">
-                            <a href="#">
-                              <span>عرض التفاصيل</span>
-                              <i class="fa-solid fa-arrow-left arrow-dir"></i>
-                            </a>
+                            أضافة للسلة
+                            <i class="fa-solid fa-bag-shopping"></i>
                           </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="card-style">
-                        <div class="img-container">
-                          <img
-                            src="/assets/images/card-img-1.png"
-                            alt="card-img-1"
-                          />
-                          <div class="like-icon">
-                            <i class="fa-regular fa-heart"></i>
-                          </div>
-                          <div
-                            class="cap-icon"
-                            style="
-                              background-color: #e2effd;
-                              color: #0871ea;
-                              font-size: 14px;
-                              padding: 10px 12px;
-                            "
-                          >
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            تعلم ذاتي
-                          </div>
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">دورة اقتصاديات سوق العمل</h5>
-                          <div class="info">
-                            <div>
-                              <i class="fa-brands fa-readme"></i>
-                              <span>10 محاضرات</span>
-                            </div>
-                            <div class="v-line">|</div>
-                            <div>
-                              <i class="fa-solid fa-clock"></i>
-                              <span>40 ساعات</span>
-                            </div>
-                            <div class="v-line">|</div>
-                            <div>
-                              <i class="fa-solid fa-calendar-days"></i>
-                              <span>10 أيام</span>
-                            </div>
-                          </div>
-                          <div class="price">
-                            <span class="price-label">السعر</span>
-                            <span class="price-value">مجانى</span>
-                          </div>
-                          <button class="main-btn">
-                            <a href="#">
-                              <span>عرض التفاصيل</span>
-                              <i class="fa-solid fa-arrow-left arrow-dir"></i>
-                            </a>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="card-style">
-                        <div class="img-container">
-                          <img
-                            src="/assets/images/card-img-1.png"
-                            alt="card-img-1"
-                          />
-                          <div class="like-icon">
-                            <i class="fa-regular fa-heart"></i>
-                          </div>
-                          <div
-                            class="cap-icon"
-                            style="
-                              background-color: #fff7d7;
-                              color: #ea9008;
-                              font-size: 14px;
-                              padding: 10px 12px;
-                            "
-                          >
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            حضوري
-                          </div>
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">دورة اقتصاديات سوق العمل</h5>
-                          <div class="info">
-                            <div>
-                              <i class="fa-brands fa-readme"></i>
-                              <span>10 محاضرات</span>
-                            </div>
-                            <div class="v-line">|</div>
-                            <div>
-                              <i class="fa-solid fa-clock"></i>
-                              <span>40 ساعات</span>
-                            </div>
-                            <div class="v-line">|</div>
-                            <div>
-                              <i class="fa-solid fa-calendar-days"></i>
-                              <span>10 أيام</span>
-                            </div>
-                          </div>
-                          <div class="price">
-                            <span class="price-label">السعر</span>
-                            <span class="price-value">مجانى</span>
-                          </div>
-                          <button class="main-btn">
-                            <a href="#">
-                              <span>عرض التفاصيل</span>
-                              <i class="fa-solid fa-arrow-left arrow-dir"></i>
-                            </a>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="card-style">
-                        <div class="img-container">
-                          <img
-                            src="/assets/images/card-img-1.png"
-                            alt="card-img-1"
-                          />
-                          <div class="like-icon">
-                            <i class="fa-regular fa-heart"></i>
-                          </div>
-                          <div
-                            class="cap-icon"
-                            style="
-                              background-color: #e2effd;
-                              color: #0871ea;
-                              font-size: 14px;
-                              padding: 10px 12px;
-                            "
-                          >
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            تعلم ذاتي
-                          </div>
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">دورة اقتصاديات سوق العمل</h5>
-                          <div class="info">
-                            <div>
-                              <i class="fa-brands fa-readme"></i>
-                              <span>10 محاضرات</span>
-                            </div>
-                            <div class="v-line">|</div>
-                            <div>
-                              <i class="fa-solid fa-clock"></i>
-                              <span>40 ساعات</span>
-                            </div>
-                            <div class="v-line">|</div>
-                            <div>
-                              <i class="fa-solid fa-calendar-days"></i>
-                              <span>10 أيام</span>
-                            </div>
-                          </div>
-                          <div class="price">
-                            <span class="price-label">السعر</span>
-                            <span class="price-value">مجانى</span>
-                          </div>
-                          <button class="main-btn">
-                            <a href="#">
-                              <span>عرض التفاصيل</span>
+                          <button class="main-btn-2">
+                            <a href="courses-details.html">
+                              التفاصيل
                               <i class="fa-solid fa-arrow-left arrow-dir"></i>
                             </a>
                           </button>
@@ -1054,184 +372,177 @@
                       </div>
                     </div>
                   </div>
-                  <div class="swiper-pagination"></div>
-                </div>
-              </div>
-              <div
-                class="tab-pane fade"
-                id="pills-disabled"
-                role="tabpanel"
-                aria-labelledby="pills-disabled-tab"
-                tabindex="0"
-              >
-                <hr class="h-line" />
-                <!-- Cards Swiper -->
-                <div class="swiper learning-trips-swiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="card-style">
-                        <div class="img-container">
-                          <img
-                            src="/assets/images/card-img-1.png"
-                            alt="card-img-1"
-                          />
-                          <div class="like-icon">
-                            <i class="fa-regular fa-heart"></i>
+                  <!-- Main Card Style 1 -->
+                  <div class="swiper-slide">
+                    <div class="card-style">
+                      <div class="img-container">
+                        <img src="/assets/images/card-img-1.png" alt="card-img-1" />
+                        <div class="like-icon">
+                          <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="cap-icon" style="
+                              background-color: #fff7d7;
+                              color: #ea9008;
+                              font-size: 14px;
+                              padding: 10px 12px;
+                            ">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                          حضوري
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">دورة اقتصاديات سوق العمل</h5>
+
+                        <div class="info">
+                          <div>
+                            <i class="fa-brands fa-readme"></i>
+                            <span>10 محاضرات</span>
                           </div>
-                          <div
-                            class="cap-icon"
-                            style="
+
+                          <div class="v-line">|</div>
+
+                          <div>
+                            <i class="fa-solid fa-clock"></i>
+                            <span>40 ساعات</span>
+                          </div>
+
+                          <div class="v-line">|</div>
+
+                          <div>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span>10 أيام</span>
+                          </div>
+                        </div>
+
+                        <div class="price">
+                          <span class="price-label">السعر</span>
+                          <span class="price-value">مجانى</span>
+                        </div>
+
+                        <button class="main-btn">
+                          <a href="courses-details.html">
+                            <span>عرض التفاصيل</span>
+                            <i class="fa-solid fa-arrow-left arrow-dir"></i>
+                          </a>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Main Card Style 1 -->
+                  <div class="swiper-slide">
+                    <div class="card-style">
+                      <div class="img-container">
+                        <img src="/assets/images/card-img-1.png" alt="card-img-1" />
+                        <div class="like-icon">
+                          <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="cap-icon" style="
+                              background-color: #e2effd;
+                              color: #0871ea;
+                              font-size: 14px;
+                              padding: 10px 12px;
+                            ">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                          تعلم ذاتي
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">دورة اقتصاديات سوق العمل</h5>
+
+                        <div class="info">
+                          <div>
+                            <i class="fa-brands fa-readme"></i>
+                            <span>10 محاضرات</span>
+                          </div>
+
+                          <div class="v-line">|</div>
+
+                          <div>
+                            <i class="fa-solid fa-clock"></i>
+                            <span>40 ساعات</span>
+                          </div>
+
+                          <div class="v-line">|</div>
+
+                          <div>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span>10 أيام</span>
+                          </div>
+                        </div>
+
+                        <div class="price">
+                          <span class="price-label">السعر</span>
+                          <span class="price-value">مجانى</span>
+                        </div>
+
+                        <button class="main-btn">
+                          <a href="#">
+                            <span>عرض التفاصيل</span>
+                            <i class="fa-solid fa-arrow-left arrow-dir"></i>
+                          </a>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+              tabindex="0">
+              <hr class="h-line" />
+              <!-- Cards Swiper -->
+              <div class="swiper learning-trips-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="card-style">
+                      <div class="img-container">
+                        <img src="/assets/images/card-img-1.png" alt="card-img-1" />
+                        <div class="like-icon">
+                          <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="cap-icon" style="
                               background-color: #edf3f1;
                               color: #53b78b;
                               font-size: 14px;
                               padding: 10px 12px;
-                            "
-                          >
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            تعلم عن بعد
-                          </div>
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">
-                            دورة تحليل البيانات وتمثيلها
-                          </h5>
-                          <div class="info">
-                            <div>
-                              <i class="fa-brands fa-readme"></i>
-                              <span>10 محاضرات</span>
-                            </div>
-                            <div class="v-line">|</div>
-                            <div>
-                              <i class="fa-solid fa-clock"></i>
-                              <span>40 ساعات</span>
-                            </div>
-                            <div class="v-line">|</div>
-                            <div>
-                              <i class="fa-solid fa-calendar-days"></i>
-                              <span>10 أيام</span>
-                            </div>
-                          </div>
-                          <div class="price">
-                            <span class="price-label">السعر</span>
-                            <span class="price-value">20,100 ريال</span>
-                          </div>
-                          <div class="card-btns">
-                            <button class="main-btn">
-                              أضافة للسلة
-                              <i class="fa-solid fa-bag-shopping"></i>
-                            </button>
-                            <button class="main-btn-2">
-                              <a href="certificates-details.html">
-                                التفاصيل
-                                <i class="fa-solid fa-arrow-left arrow-dir"></i>
-                              </a>
-                            </button>
-                          </div>
+                            ">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                          تعلم عن بعد
                         </div>
                       </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="card-style">
-                        <div class="img-container">
-                          <img
-                            src="/assets/images/card-img-1.png"
-                            alt="card-img-1"
-                          />
-                          <div class="like-icon">
-                            <i class="fa-regular fa-heart"></i>
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          دورة تحليل البيانات وتمثيلها
+                        </h5>
+                        <div class="info">
+                          <div>
+                            <i class="fa-brands fa-readme"></i>
+                            <span>10 محاضرات</span>
                           </div>
-                          <div
-                            class="cap-icon"
-                            style="
-                              background-color: #fff7d7;
-                              color: #ea9008;
-                              font-size: 14px;
-                              padding: 10px 12px;
-                            "
-                          >
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            حضوري
+                          <div class="v-line">|</div>
+                          <div>
+                            <i class="fa-solid fa-clock"></i>
+                            <span>40 ساعات</span>
+                          </div>
+                          <div class="v-line">|</div>
+                          <div>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span>10 أيام</span>
                           </div>
                         </div>
-                        <div class="card-body">
-                          <h5 class="card-title">دورة اقتصاديات سوق العمل</h5>
-                          <div class="info">
-                            <div>
-                              <i class="fa-brands fa-readme"></i>
-                              <span>10 محاضرات</span>
-                            </div>
-                            <div class="v-line">|</div>
-                            <div>
-                              <i class="fa-solid fa-clock"></i>
-                              <span>40 ساعات</span>
-                            </div>
-                            <div class="v-line">|</div>
-                            <div>
-                              <i class="fa-solid fa-calendar-days"></i>
-                              <span>10 أيام</span>
-                            </div>
-                          </div>
-                          <div class="price">
-                            <span class="price-label">السعر</span>
-                            <span class="price-value">مجانى</span>
-                          </div>
+                        <div class="price">
+                          <span class="price-label">السعر</span>
+                          <span class="price-value">20,100 ريال</span>
+                        </div>
+                        <div class="card-btns">
                           <button class="main-btn">
-                            <a href="#">
-                              <span>عرض التفاصيل</span>
-                              <i class="fa-solid fa-arrow-left arrow-dir"></i>
-                            </a>
+                            أضافة للسلة
+                            <i class="fa-solid fa-bag-shopping"></i>
                           </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="card-style">
-                        <div class="img-container">
-                          <img
-                            src="/assets/images/card-img-1.png"
-                            alt="card-img-1"
-                          />
-                          <div class="like-icon">
-                            <i class="fa-regular fa-heart"></i>
-                          </div>
-                          <div
-                            class="cap-icon"
-                            style="
-                              background-color: #e2effd;
-                              color: #0871ea;
-                              font-size: 14px;
-                              padding: 10px 12px;
-                            "
-                          >
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            تعلم ذاتي
-                          </div>
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">دورة اقتصاديات سوق العمل</h5>
-                          <div class="info">
-                            <div>
-                              <i class="fa-brands fa-readme"></i>
-                              <span>10 محاضرات</span>
-                            </div>
-                            <div class="v-line">|</div>
-                            <div>
-                              <i class="fa-solid fa-clock"></i>
-                              <span>40 ساعات</span>
-                            </div>
-                            <div class="v-line">|</div>
-                            <div>
-                              <i class="fa-solid fa-calendar-days"></i>
-                              <span>10 أيام</span>
-                            </div>
-                          </div>
-                          <div class="price">
-                            <span class="price-label">السعر</span>
-                            <span class="price-value">مجانى</span>
-                          </div>
-                          <button class="main-btn">
-                            <a href="#">
-                              <span>عرض التفاصيل</span>
+                          <button class="main-btn-2">
+                            <a href="diplomas-details.html">
+                              التفاصيل
                               <i class="fa-solid fa-arrow-left arrow-dir"></i>
                             </a>
                           </button>
@@ -1239,482 +550,994 @@
                       </div>
                     </div>
                   </div>
-                  <div class="swiper-pagination"></div>
+                  <div class="swiper-slide">
+                    <div class="card-style">
+                      <div class="img-container">
+                        <img src="/assets/images/card-img-1.png" alt="card-img-1" />
+                        <div class="like-icon">
+                          <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="cap-icon" style="
+                              background-color: #fff7d7;
+                              color: #ea9008;
+                              font-size: 14px;
+                              padding: 10px 12px;
+                            ">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                          حضوري
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">دورة اقتصاديات سوق العمل</h5>
+                        <div class="info">
+                          <div>
+                            <i class="fa-brands fa-readme"></i>
+                            <span>10 محاضرات</span>
+                          </div>
+                          <div class="v-line">|</div>
+                          <div>
+                            <i class="fa-solid fa-clock"></i>
+                            <span>40 ساعات</span>
+                          </div>
+                          <div class="v-line">|</div>
+                          <div>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span>10 أيام</span>
+                          </div>
+                        </div>
+                        <div class="price">
+                          <span class="price-label">السعر</span>
+                          <span class="price-value">مجانى</span>
+                        </div>
+                        <div class="card-btns">
+                          <button class="main-btn">
+                            أضافة للسلة
+                            <i class="fa-solid fa-bag-shopping"></i>
+                          </button>
+                          <button class="main-btn-2">
+                            <a href="diplomas-details.html">
+                              التفاصيل
+                              <i class="fa-solid fa-arrow-left arrow-dir"></i>
+                            </a>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-style">
+                      <div class="img-container">
+                        <img src="/assets/images/card-img-1.png" alt="card-img-1" />
+                        <div class="like-icon">
+                          <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="cap-icon" style="
+                              background-color: #e2effd;
+                              color: #0871ea;
+                              font-size: 14px;
+                              padding: 10px 12px;
+                            ">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                          تعلم ذاتي
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">دورة اقتصاديات سوق العمل</h5>
+                        <div class="info">
+                          <div>
+                            <i class="fa-brands fa-readme"></i>
+                            <span>10 محاضرات</span>
+                          </div>
+                          <div class="v-line">|</div>
+                          <div>
+                            <i class="fa-solid fa-clock"></i>
+                            <span>40 ساعات</span>
+                          </div>
+                          <div class="v-line">|</div>
+                          <div>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span>10 أيام</span>
+                          </div>
+                        </div>
+                        <div class="price">
+                          <span class="price-label">السعر</span>
+                          <span class="price-value">مجانى</span>
+                        </div>
+                        <button class="main-btn">
+                          <a href="#">
+                            <span>عرض التفاصيل</span>
+                            <i class="fa-solid fa-arrow-left arrow-dir"></i>
+                          </a>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
+              tabindex="0">
+              <hr class="h-line" />
+              <!-- Cards Swiper -->
+              <div class="swiper learning-trips-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="card-style">
+                      <div class="img-container">
+                        <img src="/assets/images/card-img-1.png" alt="card-img-1" />
+                        <div class="like-icon">
+                          <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="cap-icon" style="
+                              background-color: #edf3f1;
+                              color: #53b78b;
+                              font-size: 14px;
+                              padding: 10px 12px;
+                            ">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                          تعلم عن بعد
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          دورة تحليل البيانات وتمثيلها
+                        </h5>
+                        <div class="info">
+                          <div>
+                            <i class="fa-brands fa-readme"></i>
+                            <span>10 محاضرات</span>
+                          </div>
+                          <div class="v-line">|</div>
+                          <div>
+                            <i class="fa-solid fa-clock"></i>
+                            <span>40 ساعات</span>
+                          </div>
+                          <div class="v-line">|</div>
+                          <div>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span>10 أيام</span>
+                          </div>
+                        </div>
+                        <div class="price">
+                          <span class="price-label">السعر</span>
+                          <span class="price-value">20,100 ريال</span>
+                        </div>
+                        <div class="card-btns">
+                          <button class="main-btn">
+                            أضافة للسلة
+                            <i class="fa-solid fa-bag-shopping"></i>
+                          </button>
+                          <button class="main-btn-2">
+                            <a href="fellowships-details.html">
+                              التفاصيل
+                              <i class="fa-solid fa-arrow-left arrow-dir"></i>
+                            </a>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-style">
+                      <div class="img-container">
+                        <img src="/assets/images/card-img-1.png" alt="card-img-1" />
+                        <div class="like-icon">
+                          <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="cap-icon" style="
+                              background-color: #fff7d7;
+                              color: #ea9008;
+                              font-size: 14px;
+                              padding: 10px 12px;
+                            ">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                          حضوري
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">دورة اقتصاديات سوق العمل</h5>
+                        <div class="info">
+                          <div>
+                            <i class="fa-brands fa-readme"></i>
+                            <span>10 محاضرات</span>
+                          </div>
+                          <div class="v-line">|</div>
+                          <div>
+                            <i class="fa-solid fa-clock"></i>
+                            <span>40 ساعات</span>
+                          </div>
+                          <div class="v-line">|</div>
+                          <div>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span>10 أيام</span>
+                          </div>
+                        </div>
+                        <div class="price">
+                          <span class="price-label">السعر</span>
+                          <span class="price-value">مجانى</span>
+                        </div>
+                        <button class="main-btn">
+                          <a href="#">
+                            <span>عرض التفاصيل</span>
+                            <i class="fa-solid fa-arrow-left arrow-dir"></i>
+                          </a>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-style">
+                      <div class="img-container">
+                        <img src="/assets/images/card-img-1.png" alt="card-img-1" />
+                        <div class="like-icon">
+                          <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="cap-icon" style="
+                              background-color: #e2effd;
+                              color: #0871ea;
+                              font-size: 14px;
+                              padding: 10px 12px;
+                            ">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                          تعلم ذاتي
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">دورة اقتصاديات سوق العمل</h5>
+                        <div class="info">
+                          <div>
+                            <i class="fa-brands fa-readme"></i>
+                            <span>10 محاضرات</span>
+                          </div>
+                          <div class="v-line">|</div>
+                          <div>
+                            <i class="fa-solid fa-clock"></i>
+                            <span>40 ساعات</span>
+                          </div>
+                          <div class="v-line">|</div>
+                          <div>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span>10 أيام</span>
+                          </div>
+                        </div>
+                        <div class="price">
+                          <span class="price-label">السعر</span>
+                          <span class="price-value">مجانى</span>
+                        </div>
+                        <button class="main-btn">
+                          <a href="#">
+                            <span>عرض التفاصيل</span>
+                            <i class="fa-solid fa-arrow-left arrow-dir"></i>
+                          </a>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-style">
+                      <div class="img-container">
+                        <img src="/assets/images/card-img-1.png" alt="card-img-1" />
+                        <div class="like-icon">
+                          <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="cap-icon" style="
+                              background-color: #fff7d7;
+                              color: #ea9008;
+                              font-size: 14px;
+                              padding: 10px 12px;
+                            ">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                          حضوري
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">دورة اقتصاديات سوق العمل</h5>
+                        <div class="info">
+                          <div>
+                            <i class="fa-brands fa-readme"></i>
+                            <span>10 محاضرات</span>
+                          </div>
+                          <div class="v-line">|</div>
+                          <div>
+                            <i class="fa-solid fa-clock"></i>
+                            <span>40 ساعات</span>
+                          </div>
+                          <div class="v-line">|</div>
+                          <div>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span>10 أيام</span>
+                          </div>
+                        </div>
+                        <div class="price">
+                          <span class="price-label">السعر</span>
+                          <span class="price-value">مجانى</span>
+                        </div>
+                        <button class="main-btn">
+                          <a href="#">
+                            <span>عرض التفاصيل</span>
+                            <i class="fa-solid fa-arrow-left arrow-dir"></i>
+                          </a>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-style">
+                      <div class="img-container">
+                        <img src="/assets/images/card-img-1.png" alt="card-img-1" />
+                        <div class="like-icon">
+                          <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="cap-icon" style="
+                              background-color: #e2effd;
+                              color: #0871ea;
+                              font-size: 14px;
+                              padding: 10px 12px;
+                            ">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                          تعلم ذاتي
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">دورة اقتصاديات سوق العمل</h5>
+                        <div class="info">
+                          <div>
+                            <i class="fa-brands fa-readme"></i>
+                            <span>10 محاضرات</span>
+                          </div>
+                          <div class="v-line">|</div>
+                          <div>
+                            <i class="fa-solid fa-clock"></i>
+                            <span>40 ساعات</span>
+                          </div>
+                          <div class="v-line">|</div>
+                          <div>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span>10 أيام</span>
+                          </div>
+                        </div>
+                        <div class="price">
+                          <span class="price-label">السعر</span>
+                          <span class="price-value">مجانى</span>
+                        </div>
+                        <button class="main-btn">
+                          <a href="#">
+                            <span>عرض التفاصيل</span>
+                            <i class="fa-solid fa-arrow-left arrow-dir"></i>
+                          </a>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab"
+              tabindex="0">
+              <hr class="h-line" />
+              <!-- Cards Swiper -->
+              <div class="swiper learning-trips-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="card-style">
+                      <div class="img-container">
+                        <img src="/assets/images/card-img-1.png" alt="card-img-1" />
+                        <div class="like-icon">
+                          <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="cap-icon" style="
+                              background-color: #edf3f1;
+                              color: #53b78b;
+                              font-size: 14px;
+                              padding: 10px 12px;
+                            ">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                          تعلم عن بعد
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          دورة تحليل البيانات وتمثيلها
+                        </h5>
+                        <div class="info">
+                          <div>
+                            <i class="fa-brands fa-readme"></i>
+                            <span>10 محاضرات</span>
+                          </div>
+                          <div class="v-line">|</div>
+                          <div>
+                            <i class="fa-solid fa-clock"></i>
+                            <span>40 ساعات</span>
+                          </div>
+                          <div class="v-line">|</div>
+                          <div>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span>10 أيام</span>
+                          </div>
+                        </div>
+                        <div class="price">
+                          <span class="price-label">السعر</span>
+                          <span class="price-value">20,100 ريال</span>
+                        </div>
+                        <div class="card-btns">
+                          <button class="main-btn">
+                            أضافة للسلة
+                            <i class="fa-solid fa-bag-shopping"></i>
+                          </button>
+                          <button class="main-btn-2">
+                            <a href="certificates-details.html">
+                              التفاصيل
+                              <i class="fa-solid fa-arrow-left arrow-dir"></i>
+                            </a>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-style">
+                      <div class="img-container">
+                        <img src="/assets/images/card-img-1.png" alt="card-img-1" />
+                        <div class="like-icon">
+                          <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="cap-icon" style="
+                              background-color: #fff7d7;
+                              color: #ea9008;
+                              font-size: 14px;
+                              padding: 10px 12px;
+                            ">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                          حضوري
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">دورة اقتصاديات سوق العمل</h5>
+                        <div class="info">
+                          <div>
+                            <i class="fa-brands fa-readme"></i>
+                            <span>10 محاضرات</span>
+                          </div>
+                          <div class="v-line">|</div>
+                          <div>
+                            <i class="fa-solid fa-clock"></i>
+                            <span>40 ساعات</span>
+                          </div>
+                          <div class="v-line">|</div>
+                          <div>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span>10 أيام</span>
+                          </div>
+                        </div>
+                        <div class="price">
+                          <span class="price-label">السعر</span>
+                          <span class="price-value">مجانى</span>
+                        </div>
+                        <button class="main-btn">
+                          <a href="#">
+                            <span>عرض التفاصيل</span>
+                            <i class="fa-solid fa-arrow-left arrow-dir"></i>
+                          </a>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-style">
+                      <div class="img-container">
+                        <img src="/assets/images/card-img-1.png" alt="card-img-1" />
+                        <div class="like-icon">
+                          <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="cap-icon" style="
+                              background-color: #e2effd;
+                              color: #0871ea;
+                              font-size: 14px;
+                              padding: 10px 12px;
+                            ">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                          تعلم ذاتي
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">دورة اقتصاديات سوق العمل</h5>
+                        <div class="info">
+                          <div>
+                            <i class="fa-brands fa-readme"></i>
+                            <span>10 محاضرات</span>
+                          </div>
+                          <div class="v-line">|</div>
+                          <div>
+                            <i class="fa-solid fa-clock"></i>
+                            <span>40 ساعات</span>
+                          </div>
+                          <div class="v-line">|</div>
+                          <div>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span>10 أيام</span>
+                          </div>
+                        </div>
+                        <div class="price">
+                          <span class="price-label">السعر</span>
+                          <span class="price-value">مجانى</span>
+                        </div>
+                        <button class="main-btn">
+                          <a href="#">
+                            <span>عرض التفاصيل</span>
+                            <i class="fa-solid fa-arrow-left arrow-dir"></i>
+                          </a>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- End Of Learning Trips Section -->
+      </div>
+    </section>
+    <!-- End Of Learning Trips Section -->
 
-      <!-- Start Of Status Section -->
-      <section class="status-section">
-        <div class="container">
-          <div class="status-box">
-            <span>+2</span>
-            <span>شهادات احترافية</span>
+    <!-- Start Of Status Section -->
+    <section class="status-section">
+      <div class="container">
+        <div class="status-box">
+          <span>+2</span>
+          <span>شهادات احترافية</span>
+        </div>
+        <div class="status-box">
+          <span>+20</span>
+          <span>دورات</span>
+        </div>
+        <div class="status-box">
+          <span>+30</span>
+          <span>برامج</span>
+        </div>
+        <div class="status-box">
+          <span>+20</span>
+          <span>دبلومات</span>
+        </div>
+        <div class="status-box">
+          <span>1235K</span>
+          <span>مستفيد</span>
+        </div>
+      </div>
+    </section>
+    <!-- End Of Status Section -->
+
+    <!-- Start Of Blogs Section -->
+    <section id="blogs" class="container">
+      <div class="section-header">
+        <div>
+          <h2>المقالات</h2>
+          <p>
+            مقالات تعليمية مختارة تساعدك على تطوير معرفتك وتقديم حلول وأفكار
+            عملية
+          </p>
+        </div>
+        <a href="#" class="view-all-btn">
+          عرض الكل
+          <i class="fa-solid fa-arrow-left arrow-dir"></i>
+        </a>
+      </div>
+
+      <hr class="h-line" />
+
+      <!-- Cards Swiper -->
+      <div class="swiper blogs-swiper">
+        <div class="swiper-wrapper">
+          <!-- Main Card Style 2 -->
+          <div class="swiper-slide">
+            <div class="card-style">
+              <div class="img-container">
+                <img src="/assets/images/card-img-2.jpg" alt="card-img-2" />
+              </div>
+              <div class="card-body">
+                <div class="badge-title">الذكاء الاصطناعي</div>
+
+                <h5 class="card-title">التطور المهني المستمر</h5>
+
+                <p class="card-description">
+                  في عصر التطور المهني المستمر، أصبح قرار الإفصاح عن بيانات
+                  التدريب أحد أبرز المتطلبات التي تسهم في تحسين كفاءة
+                </p>
+
+                <button class="main-btn">
+                  <a href="blogs-details.html">
+                    <span>عرض التفاصيل</span>
+                    <i class="fa-solid fa-arrow-left arrow-dir"></i>
+                  </a>
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="status-box">
-            <span>+20</span>
-            <span>دورات</span>
+          <!-- Main Card Style 2 -->
+          <div class="swiper-slide">
+            <div class="card-style">
+              <div class="img-container">
+                <img src="/assets/images/card-img-2.jpg" alt="card-img-2" />
+              </div>
+              <div class="card-body">
+                <div class="badge-title">الذكاء الاصطناعي</div>
+
+                <h5 class="card-title">التطور المهني المستمر</h5>
+
+                <p class="card-description">
+                  في عصر التطور المهني المستمر، أصبح قرار الإفصاح عن بيانات
+                  التدريب أحد أبرز المتطلبات التي تسهم في تحسين كفاءة
+                </p>
+
+                <button class="main-btn">
+                  <a href="blogs-details.html">
+                    <span>عرض التفاصيل</span>
+                    <i class="fa-solid fa-arrow-left arrow-dir"></i>
+                  </a>
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="status-box">
-            <span>+30</span>
-            <span>برامج</span>
+          <!-- Main Card Style 2 -->
+          <div class="swiper-slide">
+            <div class="card-style">
+              <div class="img-container">
+                <img src="/assets/images/card-img-2.jpg" alt="card-img-2" />
+              </div>
+              <div class="card-body">
+                <div class="badge-title">الذكاء الاصطناعي</div>
+
+                <h5 class="card-title">التطور المهني المستمر</h5>
+
+                <p class="card-description">
+                  في عصر التطور المهني المستمر، أصبح قرار الإفصاح عن بيانات
+                  التدريب أحد أبرز المتطلبات التي تسهم في تحسين كفاءة
+                </p>
+
+                <button class="main-btn">
+                  <a href="blogs-details.html">
+                    <span>عرض التفاصيل</span>
+                    <i class="fa-solid fa-arrow-left arrow-dir"></i>
+                  </a>
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="status-box">
-            <span>+20</span>
-            <span>دبلومات</span>
+          <!-- Main Card Style 2 -->
+          <div class="swiper-slide">
+            <div class="card-style">
+              <div class="img-container">
+                <img src="/assets/images/card-img-2.jpg" alt="card-img-2" />
+              </div>
+              <div class="card-body">
+                <div class="badge-title">الذكاء الاصطناعي</div>
+
+                <h5 class="card-title">التطور المهني المستمر</h5>
+
+                <p class="card-description">
+                  في عصر التطور المهني المستمر، أصبح قرار الإفصاح عن بيانات
+                  التدريب أحد أبرز المتطلبات التي تسهم في تحسين كفاءة
+                </p>
+
+                <button class="main-btn">
+                  <a href="blogs-details.html">
+                    <span>عرض التفاصيل</span>
+                    <i class="fa-solid fa-arrow-left arrow-dir"></i>
+                  </a>
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="status-box">
-            <span>1235K</span>
-            <span>مستفيد</span>
+          <!-- Main Card Style 2 -->
+          <div class="swiper-slide">
+            <div class="card-style">
+              <div class="img-container">
+                <img src="/assets/images/card-img-2.jpg" alt="card-img-2" />
+              </div>
+              <div class="card-body">
+                <div class="badge-title">الذكاء الاصطناعي</div>
+
+                <h5 class="card-title">التطور المهني المستمر</h5>
+
+                <p class="card-description">
+                  في عصر التطور المهني المستمر، أصبح قرار الإفصاح عن بيانات
+                  التدريب أحد أبرز المتطلبات التي تسهم في تحسين كفاءة
+                </p>
+
+                <button class="main-btn">
+                  <a href="blogs-details.html">
+                    <span>عرض التفاصيل</span>
+                    <i class="fa-solid fa-arrow-left arrow-dir"></i>
+                  </a>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-      <!-- End Of Status Section -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- End Of Blogs Section -->
 
-      <!-- Start Of Blogs Section -->
-      <section id="blogs" class="container">
-        <div class="section-header">
-          <div>
-            <h2>المقالات</h2>
-            <p>
-              مقالات تعليمية مختارة تساعدك على تطوير معرفتك وتقديم حلول وأفكار
-              عملية
-            </p>
-          </div>
-          <a href="#" class="view-all-btn">
-            عرض الكل
-            <i class="fa-solid fa-arrow-left arrow-dir"></i>
-          </a>
-        </div>
+    <!-- Start Of Our Partners Section -->
+    <section class="our-partners">
+      <div class="partners-header container">
+        <h2>شركائنا</h2>
+        <a href="partners-details.html" class="view-all-btn">
+          عرض الكل
+          <i class="fa-solid fa-arrow-left arrow-dir"></i>
+        </a>
+      </div>
 
-        <hr class="h-line" />
-
-        <!-- Cards Swiper -->
-        <div class="swiper blogs-swiper">
+      <div class="container">
+        <div class="swiper partners-swiper">
           <div class="swiper-wrapper">
-            <!-- Main Card Style 2 -->
             <div class="swiper-slide">
-              <div class="card-style">
-                <div class="img-container">
-                  <img src="/assets/images/card-img-2.jpg" alt="card-img-2" />
-                </div>
-                <div class="card-body">
-                  <div class="badge-title">الذكاء الاصطناعي</div>
-
-                  <h5 class="card-title">التطور المهني المستمر</h5>
-
-                  <p class="card-description">
-                    في عصر التطور المهني المستمر، أصبح قرار الإفصاح عن بيانات
-                    التدريب أحد أبرز المتطلبات التي تسهم في تحسين كفاءة
-                  </p>
-
-                  <button class="main-btn">
-                    <a href="blogs-details.html">
-                      <span>عرض التفاصيل</span>
-                      <i class="fa-solid fa-arrow-left arrow-dir"></i>
-                    </a>
-                  </button>
-                </div>
+              <div class="box">
+                <img src="/assets/images/p1.svg" alt="Partner 1" />
               </div>
             </div>
-            <!-- Main Card Style 2 -->
             <div class="swiper-slide">
-              <div class="card-style">
-                <div class="img-container">
-                  <img src="/assets/images/card-img-2.jpg" alt="card-img-2" />
-                </div>
-                <div class="card-body">
-                  <div class="badge-title">الذكاء الاصطناعي</div>
-
-                  <h5 class="card-title">التطور المهني المستمر</h5>
-
-                  <p class="card-description">
-                    في عصر التطور المهني المستمر، أصبح قرار الإفصاح عن بيانات
-                    التدريب أحد أبرز المتطلبات التي تسهم في تحسين كفاءة
-                  </p>
-
-                  <button class="main-btn">
-                    <a href="blogs-details.html">
-                      <span>عرض التفاصيل</span>
-                      <i class="fa-solid fa-arrow-left arrow-dir"></i>
-                    </a>
-                  </button>
-                </div>
+              <div class="box">
+                <img src="/assets/images/p2.svg" alt="Partner 2" />
               </div>
             </div>
-            <!-- Main Card Style 2 -->
             <div class="swiper-slide">
-              <div class="card-style">
-                <div class="img-container">
-                  <img src="/assets/images/card-img-2.jpg" alt="card-img-2" />
-                </div>
-                <div class="card-body">
-                  <div class="badge-title">الذكاء الاصطناعي</div>
-
-                  <h5 class="card-title">التطور المهني المستمر</h5>
-
-                  <p class="card-description">
-                    في عصر التطور المهني المستمر، أصبح قرار الإفصاح عن بيانات
-                    التدريب أحد أبرز المتطلبات التي تسهم في تحسين كفاءة
-                  </p>
-
-                  <button class="main-btn">
-                    <a href="blogs-details.html">
-                      <span>عرض التفاصيل</span>
-                      <i class="fa-solid fa-arrow-left arrow-dir"></i>
-                    </a>
-                  </button>
-                </div>
+              <div class="box">
+                <img src="/assets/images/p3.svg" alt="Partner 3" />
               </div>
             </div>
-            <!-- Main Card Style 2 -->
             <div class="swiper-slide">
-              <div class="card-style">
-                <div class="img-container">
-                  <img src="/assets/images/card-img-2.jpg" alt="card-img-2" />
-                </div>
-                <div class="card-body">
-                  <div class="badge-title">الذكاء الاصطناعي</div>
-
-                  <h5 class="card-title">التطور المهني المستمر</h5>
-
-                  <p class="card-description">
-                    في عصر التطور المهني المستمر، أصبح قرار الإفصاح عن بيانات
-                    التدريب أحد أبرز المتطلبات التي تسهم في تحسين كفاءة
-                  </p>
-
-                  <button class="main-btn">
-                    <a href="blogs-details.html">
-                      <span>عرض التفاصيل</span>
-                      <i class="fa-solid fa-arrow-left arrow-dir"></i>
-                    </a>
-                  </button>
-                </div>
+              <div class="box">
+                <img src="/assets/images/p4.svg" alt="Partner 4" />
               </div>
             </div>
-            <!-- Main Card Style 2 -->
             <div class="swiper-slide">
-              <div class="card-style">
-                <div class="img-container">
-                  <img src="/assets/images/card-img-2.jpg" alt="card-img-2" />
-                </div>
-                <div class="card-body">
-                  <div class="badge-title">الذكاء الاصطناعي</div>
-
-                  <h5 class="card-title">التطور المهني المستمر</h5>
-
-                  <p class="card-description">
-                    في عصر التطور المهني المستمر، أصبح قرار الإفصاح عن بيانات
-                    التدريب أحد أبرز المتطلبات التي تسهم في تحسين كفاءة
-                  </p>
-
-                  <button class="main-btn">
-                    <a href="blogs-details.html">
-                      <span>عرض التفاصيل</span>
-                      <i class="fa-solid fa-arrow-left arrow-dir"></i>
-                    </a>
-                  </button>
-                </div>
+              <div class="box">
+                <img src="/assets/images/p5.svg" alt="Partner 5" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="box">
+                <img src="/assets/images/p5.svg" alt="Partner 5" />
               </div>
             </div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
-      </section>
-      <!-- End Of Blogs Section -->
+      </div>
+    </section>
+    <!-- End Of Our Partners Section -->
 
-      <!-- Start Of Our Partners Section -->
-      <section class="our-partners">
-        <div class="partners-header container">
-          <h2>شركائنا</h2>
-          <a href="partners-details.html" class="view-all-btn">
-            عرض الكل
-            <i class="fa-solid fa-arrow-left arrow-dir"></i>
-          </a>
-        </div>
+    <!-- Start Of Testimonials Section -->
+    <section class="testimonials-section">
+      <div class="testimonials-container container">
+        <h2 class="section-title">آراء العملاء</h2>
 
-        <div class="container">
-          <div class="swiper partners-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="box">
-                  <img src="/assets/images/p1.svg" alt="Partner 1" />
+        <div class="swiper testimonlia soiwper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">
+                  <i class="fas fa-quote-right"></i>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="box">
-                  <img src="/assets/images/p2.svg" alt="Partner 2" />
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="box">
-                  <img src="/assets/images/p3.svg" alt="Partner 3" />
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="box">
-                  <img src="/assets/images/p4.svg" alt="Partner 4" />
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="box">
-                  <img src="/assets/images/p5.svg" alt="Partner 5" />
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="box">
-                  <img src="/assets/images/p5.svg" alt="Partner 5" />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
-      <!-- End Of Our Partners Section -->
-
-      <!-- Start Of Testimonials Section -->
-      <section class="testimonials-section">
-        <div class="testimonials-container container">
-          <h2 class="section-title">آراء العملاء</h2>
-
-          <div class="swiper testimonlia soiwper">
-            <div class="swiper-wrapper">
-              <!-- Slide 1 -->
-              <div class="swiper-slide">
-                <div class="testimonial-card">
-                  <div class="quote-icon">
-                    <i class="fas fa-quote-right"></i>
-                  </div>
-                  <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <p class="testimonial-text">
-                    "المنصة تقدم محتوى مفيد وفريق دعم ممتاز. ساعدتني في تطوير
-                    مهاراتي وفتح فرص جديدة."
-                  </p>
-                  <hr />
-                  <div class="user-info">
-                    <img src="https://i.pravatar.cc/60" alt="user" />
-                    <div>
-                      <h4>محمد العرجان</h4>
-                      <p>رئيس شركة يونيڤرسال</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Duplicate Slides -->
-              <div class="swiper-slide">
-                <div class="testimonial-card">
-                  <div class="quote-icon">
-                    <i class="fas fa-quote-right"></i>
-                  </div>
-                  <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <p class="testimonial-text">
-                    "المنصة تقدم محتوى مفيد وفريق دعم ممتاز. ساعدتني في تطوير
-                    مهاراتي وفتح فرص جديدة."
-                  </p>
-                  <hr />
-                  <div class="user-info">
-                    <img src="https://i.pravatar.cc/61" alt="user" />
-                    <div>
-                      <h4>محمد العرجان</h4>
-                      <p>رئيس شركة يونيڤرسال</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="testimonial-card">
-                  <div class="quote-icon">
-                    <i class="fas fa-quote-right"></i>
-                  </div>
-                  <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <p class="testimonial-text">
-                    "المنصة تقدم محتوى مفيد وفريق دعم ممتاز. ساعدتني في تطوير
-                    مهاراتي وفتح فرص جديدة."
-                  </p>
-                  <hr />
-                  <div class="user-info">
-                    <img src="https://i.pravatar.cc/62" alt="user" />
-                    <div>
-                      <h4>محمد العرجان</h4>
-                      <p>رئيس شركة يونيڤرسال</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="testimonial-card">
-                  <div class="quote-icon">
-                    <i class="fas fa-quote-right"></i>
-                  </div>
-                  <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <p class="testimonial-text">
-                    "المنصة تقدم محتوى مفيد وفريق دعم ممتاز. ساعدتني في تطوير
-                    مهاراتي وفتح فرص جديدة."
-                  </p>
-                  <hr />
-                  <div class="user-info">
-                    <img src="https://i.pravatar.cc/62" alt="user" />
-                    <div>
-                      <h4>محمد العرجان</h4>
-                      <p>رئيس شركة يونيڤرسال</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="testimonial-card">
-                  <div class="quote-icon">
-                    <i class="fas fa-quote-right"></i>
-                  </div>
-                  <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <p class="testimonial-text">
-                    "المنصة تقدم محتوى مفيد وفريق دعم ممتاز. ساعدتني في تطوير
-                    مهاراتي وفتح فرص جديدة."
-                  </p>
-                  <hr />
-                  <div class="user-info">
-                    <img src="https://i.pravatar.cc/62" alt="user" />
-                    <div>
-                      <h4>محمد العرجان</h4>
-                      <p>رئيس شركة يونيڤرسال</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="testimonial-card">
-                  <div class="quote-icon">
-                    <i class="fas fa-quote-right"></i>
-                  </div>
-                  <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <p class="testimonial-text">
-                    "المنصة تقدم محتوى مفيد وفريق دعم ممتاز. ساعدتني في تطوير
-                    مهاراتي وفتح فرص جديدة."
-                  </p>
-                  <hr />
-                  <div class="user-info">
-                    <img src="https://i.pravatar.cc/62" alt="user" />
-                    <div>
-                      <h4>محمد العرجان</h4>
-                      <p>رئيس شركة يونيڤرسال</p>
-                    </div>
+                <p class="testimonial-text">
+                  "المنصة تقدم محتوى مفيد وفريق دعم ممتاز. ساعدتني في تطوير
+                  مهاراتي وفتح فرص جديدة."
+                </p>
+                <hr />
+                <div class="user-info">
+                  <img src="https://i.pravatar.cc/60" alt="user" />
+                  <div>
+                    <h4>محمد العرجان</h4>
+                    <p>رئيس شركة يونيڤرسال</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Swiper Controls -->
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
-      <!-- End Of Testimonials Section -->
-
-      <!-- Start Of Email Section -->
-      <section id="email-section" class="container">
-        <div class="email-box">
-          <div class="email-content">
-            <!-- Text Side -->
-            <div class="text-box">
-              <h2>اشترك في نشرتنا البريدية</h2>
-              <p>
-                اشترك ببريدك الإلكتروني ليصلك كل جديد من المقالات والدورات وفرص
-                التعلم، وكن أول من يعرف آخر التحديثات والعروض المميزة
-              </p>
+            <!-- Duplicate Slides -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">
+                  <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "المنصة تقدم محتوى مفيد وفريق دعم ممتاز. ساعدتني في تطوير
+                  مهاراتي وفتح فرص جديدة."
+                </p>
+                <hr />
+                <div class="user-info">
+                  <img src="https://i.pravatar.cc/61" alt="user" />
+                  <div>
+                    <h4>محمد العرجان</h4>
+                    <p>رئيس شركة يونيڤرسال</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <!-- Form Side -->
-            <div class="form-box">
-              <label for="email">البريد الإلكتروني</label>
-              <input
-                type="email"
-                id="email"
-                placeholder="اكتب البريد الإلكتروني هنا"
-              />
-              <button class="subscribe-btn">اشترك الآن</button>
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">
+                  <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "المنصة تقدم محتوى مفيد وفريق دعم ممتاز. ساعدتني في تطوير
+                  مهاراتي وفتح فرص جديدة."
+                </p>
+                <hr />
+                <div class="user-info">
+                  <img src="https://i.pravatar.cc/62" alt="user" />
+                  <div>
+                    <h4>محمد العرجان</h4>
+                    <p>رئيس شركة يونيڤرسال</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">
+                  <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "المنصة تقدم محتوى مفيد وفريق دعم ممتاز. ساعدتني في تطوير
+                  مهاراتي وفتح فرص جديدة."
+                </p>
+                <hr />
+                <div class="user-info">
+                  <img src="https://i.pravatar.cc/62" alt="user" />
+                  <div>
+                    <h4>محمد العرجان</h4>
+                    <p>رئيس شركة يونيڤرسال</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">
+                  <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "المنصة تقدم محتوى مفيد وفريق دعم ممتاز. ساعدتني في تطوير
+                  مهاراتي وفتح فرص جديدة."
+                </p>
+                <hr />
+                <div class="user-info">
+                  <img src="https://i.pravatar.cc/62" alt="user" />
+                  <div>
+                    <h4>محمد العرجان</h4>
+                    <p>رئيس شركة يونيڤرسال</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">
+                  <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "المنصة تقدم محتوى مفيد وفريق دعم ممتاز. ساعدتني في تطوير
+                  مهاراتي وفتح فرص جديدة."
+                </p>
+                <hr />
+                <div class="user-info">
+                  <img src="https://i.pravatar.cc/62" alt="user" />
+                  <div>
+                    <h4>محمد العرجان</h4>
+                    <p>رئيس شركة يونيڤرسال</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+
+          <!-- Swiper Controls -->
+          <div class="swiper-pagination"></div>
         </div>
-      </section>
-      <!-- End Of Email Section -->
-    </main>
+      </div>
+    </section>
+    <!-- End Of Testimonials Section -->
 
-    <!-- Start Of Footer -->
-    <div id="footer"></div>
-    <!-- End Of Footer -->
+    <!-- Start Of Email Section -->
+    <section id="email-section" class="container">
+      <div class="email-box">
+        <div class="email-content">
+          <!-- Text Side -->
+          <div class="text-box">
+            <h2>اشترك في نشرتنا البريدية</h2>
+            <p>
+              اشترك ببريدك الإلكتروني ليصلك كل جديد من المقالات والدورات وفرص
+              التعلم، وكن أول من يعرف آخر التحديثات والعروض المميزة
+            </p>
+          </div>
 
-    <!-- jQuery -->
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      crossorigin="anonymous"
-    ></script>
+          <!-- Form Side -->
+          <div class="form-box">
+            <label for="email">البريد الإلكتروني</label>
+            <input type="email" id="email" placeholder="اكتب البريد الإلكتروني هنا" />
+            <button class="subscribe-btn">اشترك الآن</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Of Email Section -->
+  </main>
 
-    <!-- Bootstrap -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      crossorigin="anonymous"
-    ></script>
+  <!-- Start Of Footer -->
+  <div id="footer"></div>
+  <!-- End Of Footer -->
 
-    <!-- Load Header & Footer -->
-    <script>
-      $(function () {
-        $("#header").load("partials/header.html");
-        $("#footer").load("partials/footer.html");
-      });
-    </script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
 
-    <!-- Swiper JS -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
-      integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
 
-    <!-- Custom JS -->
-    <script src="assets/js/main.js"></script>
-  </body>
+  <!-- Load Header & Footer -->
+  <script>
+    $(function () {
+      $("#header").load("partials/header.html");
+      $("#footer").load("partials/footer.html");
+    });
+  </script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+    integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Custom JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+
 </html>

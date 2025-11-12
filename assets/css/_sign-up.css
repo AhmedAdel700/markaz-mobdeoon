@@ -88,6 +88,7 @@ main.sign-up-page aside:first-child form > div:not(.otp-container) {
   display: flex;
   justify-content: center;
   gap: 24px;
+  direction: ltr;
 }
 
 .otp-input {
@@ -284,8 +285,6 @@ html[dir="rtl"] .phone-input-wrapper input.phone-with-flag {
   text-align: right;
 }
 
-
-
 html[dir="rtl"] .check-box {
   flex-direction: row-reverse;
 }
@@ -308,6 +307,28 @@ html[dir="rtl"] .form-check .form-check-label {
 /* -------------------------------
    Right Side (Image)
 --------------------------------*/
+main.sign-up-page .right-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: linear-gradient(
+      135deg,
+      var(--primary-color) 0%,
+      #7a912c 40%,
+      #4d5b1f 70%,
+      #2d3a14 100%
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 4px,
+      transparent 4px,
+      transparent 12px
+    );
+  background-blend-mode: overlay; 
+}
+
 main.sign-up-page aside:last-child {
   width: 50%;
   height: 100%;
@@ -317,7 +338,7 @@ main.sign-up-page aside:last-child {
 main.sign-up-page aside:last-child img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 

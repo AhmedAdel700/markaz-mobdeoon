@@ -6,6 +6,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
+  --primary-color: #a4b93a;
+  --secondary-color: #f6f9f6;
+  --primary-color-40: #91a52c;
+  --main-white: #ffffff;
+  --main-black: #121212;
+  --secondary-black: #2e2e2e;
+  --main-gray: #7a8577;
+  --secondary-gray: #a3ada1;
+  --hover-btn-bg: #95aa2a;
+
+  --border-1: 1px solid #e7ebe6;
+  --border-2: 1px solid #dfe4de;
+  --border-3: 1px solid #cfd4ce;
+
+  --border-r-4: 4px;
+  --border-r-8: 8px;
+  --border-r-16: 16px;
+
+  --shadow-sm: 0px 2px 6px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0px 10px 40px rgba(0, 0, 0, 0.08);
+
+  --main-transition: 0.35s;
+}
+
+/* King Khalid Variabls */
+/* :root {
   --primary-color: #045531;
   --secondary-color: #edf4f2;
   --primary-color-40: #1e764f;
@@ -28,4 +54,4 @@
   --shadow-lg: 0px 12px 53px 0px #0000000a;
 
   --main-transition: 0.35s;
-}
+} */

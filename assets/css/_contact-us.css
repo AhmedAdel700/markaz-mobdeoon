@@ -22,7 +22,7 @@
 .contact-us .contact-us-bg {
   width: 100%;
   min-height: 70vh;
-  /* background-image: url(/assets/images/about-bg.svg); */
+  /* background-image: url(assets/images/about-bg.svg); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

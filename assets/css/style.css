@@ -597,13 +597,15 @@ button.main-btn-2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
 
 .card-style button {
   width: 100%;
   display: block;
   margin-top: auto;
+  font-size: 16px;
+  padding: 0 6px;
 }
 
 .card-style button a {
@@ -615,6 +617,14 @@ button.main-btn-2 {
 .card-style button i {
   margin: 0 8px;
   font-size: 18px;
+}
+
+@media (max-width: 767px) {
+  .card-style .card-btns {
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+  }
 }
 
 /* -------------------------------------------------- */
@@ -2035,7 +2045,7 @@ html[dir="ltr"] .about-bg {
 }
 
 .about .about-title h1 {
-  font-size: 56px;
+  font-size: 48px;
   font-weight: 400;
   line-height: 1.4;
   color: var(--main-black);

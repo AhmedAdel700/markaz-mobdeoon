@@ -1335,7 +1335,7 @@ html[dir="ltr"] .search-box .form-select {
 
 .status-section {
   height: fit-content;
-  background-image: url(/assets/images/Textures.svg);
+  background-image: url(../images/Textures.svg);
   background-position: center;
   background-size: cover;
   background-color: var(--primary-color-40);
@@ -1621,7 +1621,7 @@ hr {
   position: absolute;
   inset: 0;
   right: 110px;
-  background-image: url("/assets/images/email-section.svg");
+  background-image: url("../images/email-section.svg");
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;

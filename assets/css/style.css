@@ -1038,6 +1038,7 @@ ul.offcanvas-nav {
     #fcfdf7 85%,
     #ffffff 100%
   );
+  padding-top: 150px;
 }
 
 html[dir="ltr"] .hero {
@@ -1708,6 +1709,7 @@ html[dir="ltr"] .email-box::before {
   /* Hero */
   .hero {
     margin-top: 40px;
+    padding-top: 40px;
   }
   .hero .hero-text-box {
     margin-inline-start: 80px;
@@ -1770,6 +1772,10 @@ html[dir="ltr"] .email-box::before {
 @media (max-width: 1024px) {
   .hero {
     margin-bottom: 35px;
+    .hero {
+      margin-top: 40px;
+      padding-top: 0px;
+    }
   }
   /* Training */
   .training-section {

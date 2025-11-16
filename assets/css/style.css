@@ -1,11 +1,4 @@
 /* -------------------------------------------------- */
-/* 🟢 MAIN STYLESHEET - IMPORTS ALL PARTIALS */
-/* -------------------------------------------------- */
-
-/* Variables and imports must come first */
-/* @import url("_variables.css"); */
-
-/* -------------------------------------------------- */
 /* 🟢 IMPORTS & ROOT VARIABLES */
 /* -------------------------------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap");
@@ -36,50 +29,6 @@
 
   --main-transition: 0.35s;
 }
-
-/* King Khalid Variabls */
-/* :root {
-  --primary-color: #045531;
-  --secondary-color: #edf4f2;
-  --primary-color-40: #1e764f;
-  --main-white: #ffffff;
-  --main-black: #1a1a1a;
-  --secondary-black: #4d4d4d;
-  --main-gray: #666666;
-  --secondary-gray: #4d5e6f;
-  --hover-btn-bg: #033d23;
-
-  --border-1: 1px solid #f1f2f2;
-  --border-2: 1px solid #ecf3f1;
-  --border-3: 1px solid #E6E6E6;
-
-  --border-r-4: 4px;
-  --border-r-8: 8px;
-  --border-r-16: 16px;
-
-  --shadow-sm: 0px 2.4px 8.61px 0px #00000005;
-  --shadow-lg: 0px 12px 53px 0px #0000000a;
-
-  --main-transition: 0.35s;
-} */
-
-/* Base styles */
-/* @import url("_base.css"); */
-/* ==================================================
-   Global.css Index
-   1) Global Resets & Base Styles
-   2) Custom Scrollbar
-   3) Form Controls
-      - Text Inputs
-      - Focus States
-      - Checkbox Styles
-   4) Accordion
-   5) Dropdown Menu
-      - Dropdown Button
-      - Dropdown Menu Styling
-      - Active & Hover States
-      - Responsive Adjustments
-   ================================================== */
 
 /* -------------------------------------------------- */
 /* 🟢 GLOBAL RESETS & BASE STYLES */
@@ -4950,16 +4899,3 @@ textarea.form-control {
     flex: 0 0 auto;
   }
 }
-/* @import url("_home.css"); */
-/* @import url("_about.css"); */
-/* @import url("_sign-up.css"); */
-/* @import url("_courses.css"); */
-/* @import url("_courses-details.css"); */
-/* @import url("_contact-us.css"); */
-/* @import url("_blog-details.css"); */
-/* @import url("_show-details.css"); */
-/* @import url("_orders.css"); */
-/* @import url("_footer.css"); */
-
-/* Responsive */
-/* @import url("_responsive.css"); */

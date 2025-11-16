@@ -3,7 +3,7 @@
     const container = document.querySelector('.training-swiper');
     if (!container) return;
     new Swiper(container, {
-        slidesPerView: 1.2,
+        slidesPerView: 1.1,
         spaceBetween: 16,
         grabCursor: true,
         loop: true,
@@ -20,7 +20,7 @@
     const container = document.querySelector('.testimonlia.soiwper');
     if (!container) return;
     new Swiper(container, {
-        slidesPerView: 1.2,
+        slidesPerView: 1.1,
         spaceBetween: 20,
         grabCursor: true,
         loop: true,
@@ -42,7 +42,7 @@
     if (!containers.length) return;
     containers.forEach((container) => {
         new Swiper(container, {
-            slidesPerView: 1.2,
+            slidesPerView: 1.1,
             spaceBetween: 16,
             grabCursor: true,
             loop: true,
@@ -69,7 +69,7 @@
     const container = document.querySelector('.blogs-swiper');
     if (!container) return;
     new Swiper(container, {
-        slidesPerView: 1.2,
+        slidesPerView: 1.1,
         spaceBetween: 16,
         grabCursor: true,
         loop: true,
@@ -86,7 +86,7 @@
     const container = document.querySelector('.partners-swiper');
     if (!container) return;
     new Swiper(container, {
-        slidesPerView: 1.2,
+        slidesPerView: 1.1,
         spaceBetween: 16,
         grabCursor: true,
         loop: true,
@@ -101,6 +101,29 @@
         },
     });
 })();
+
+// 🟢 Status Swiper
+document.addEventListener("DOMContentLoaded", () => {
+    const statusSlider = document.querySelector(".status-swiper");
+
+    if (statusSlider) {
+        new Swiper(".status-swiper", {
+            slidesPerView: 4,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 2000,
+            },
+            breakpoints: {
+                0: { slidesPerView: 1 },
+                480: { slidesPerView: 2 },
+                768: { slidesPerView: 3 },
+                1024: { slidesPerView: 4 },
+                1280: { slidesPerView: 5 },
+            }
+        });
+    }
+});
 
 // 🟢 Eye Icon
 document.addEventListener("DOMContentLoaded", function () {
